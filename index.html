@@ -1,0 +1,3073 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seychelles · Programme Complet · Oct 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --praslin: #1A7A5E;
+  --praslin-light: rgba(26,122,94,0.1);
+  --digue: #1A5A9A;
+  --digue-light: rgba(26,90,154,0.1);
+  --mahe: #8A3A1A;
+  --mahe-light: rgba(138,58,26,0.1);
+  --transit: #5A4A7A;
+  --transit-light: rgba(90,74,122,0.1);
+  --gold: #C8922A;
+  --gold-light: rgba(200,146,42,0.12);
+  --cream: #FEFAF2;
+  --warm: #F5EDD8;
+  --stone: #9A8E7A;
+  --text: #2A2018;
+  --muted: #7A7060;
+  --border: #E8E0CC;
+  --white: #FFFFFF;
+  --green-ok: #2A7A3A;
+  --red-warn: #C03A2A;
+  --veg: #4A8A2A;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  font-family:'Inter', sans-serif;
+  font-weight:300;
+  background: var(--cream);
+  color: var(--text);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ══ HERO ══════════════════════════════ */
+.hero {
+  background: linear-gradient(160deg, #0D3A2E 0%, #1A5A44 35%, #0A3A5E 70%, #1A3A6A 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events:none;
+}
+
+.hero-badge {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 18px;
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:20px;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.6);
+  margin-bottom:24px;
+}
+
+.hero h1 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(3rem,8vw,6rem);
+  font-weight:700;
+  color:#FEFAF2;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.hero h1 span { color:#F0C060; font-style:italic; }
+
+.hero-sub {
+  font-size:16px;
+  color:rgba(255,255,255,0.55);
+  font-weight:300;
+  margin-bottom:40px;
+  letter-spacing:0.5px;
+}
+
+.hero-cards {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:center;
+  margin-bottom:50px;
+}
+
+.hero-card {
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(8px);
+  padding:14px 20px;
+  border-radius:4px;
+  text-align:center;
+  min-width:110px;
+}
+
+.hero-card-val {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  font-weight:700;
+  color:#F0C060;
+  line-height:1;
+}
+
+.hero-card-label {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,0.4);
+  margin-top:4px;
+}
+
+.island-pills {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+
+.island-pill {
+  padding:8px 20px;
+  border-radius:3px;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.pill-praslin { background:rgba(26,122,94,0.3); border:1px solid rgba(26,122,94,0.5); color:#7ADCB4; }
+.pill-digue   { background:rgba(26,90,154,0.3); border:1px solid rgba(26,90,154,0.5); color:#7AC0F0; }
+.pill-mahe    { background:rgba(138,58,26,0.3); border:1px solid rgba(138,58,26,0.5); color:#F0A07A; }
+
+.scroll-hint {
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  color:rgba(255,255,255,0.3);
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform:translateX(-50%) translateY(0); }
+  50% { transform:translateX(-50%) translateY(8px); }
+}
+
+/* ══ STICKY NAV ═══════════════════════ */
+.sticky-nav {
+  position:sticky;
+  top:0;
+  z-index:200;
+  background:rgba(254,250,242,0.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 20px;
+  display:flex;
+  align-items:center;
+  gap:0;
+  overflow-x:auto;
+  white-space:nowrap;
+  box-shadow:0 2px 16px rgba(42,32,24,0.06);
+}
+
+.nav-section {
+  display:flex;
+  align-items:center;
+  height:48px;
+  padding:0 4px;
+  border-right:1px solid var(--border);
+  gap:2px;
+  flex-shrink:0;
+}
+
+.nav-section:last-child { border-right:none; }
+
+.nav-dot {
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  flex-shrink:0;
+  margin-right:4px;
+}
+
+.nav-btn {
+  padding:5px 10px;
+  font-size:10px;
+  font-weight:500;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--muted);
+  text-decoration:none;
+  border-radius:2px;
+  transition:all 0.2s;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  white-space:nowrap;
+}
+
+.nav-btn:hover { color:var(--text); background:var(--warm); }
+
+/* ══ PROGRESS BAR ══════════════════════ */
+.progress-bar {
+  height:3px;
+  background:var(--border);
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:300;
+}
+
+.progress-fill {
+  height:100%;
+  background:linear-gradient(90deg, var(--praslin), var(--digue), var(--mahe));
+  width:0%;
+  transition:width 0.1s;
+}
+
+/* ══ LAYOUT ════════════════════════════ */
+.container {
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 20px;
+}
+
+/* ══ ISLAND HEADER ══════════════════════ */
+.island-header {
+  padding:60px 0 0;
+}
+
+.island-header-inner {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:30px;
+  align-items:start;
+  padding:40px;
+  border-radius:4px;
+  margin-bottom:0;
+  position:relative;
+  overflow:hidden;
+}
+
+.ih-praslin { background:linear-gradient(135deg, #0D3A2A 0%, #1A5A40 100%); color:white; }
+.ih-digue   { background:linear-gradient(135deg, #0D2A4A 0%, #1A3A6A 100%); color:white; }
+.ih-mahe    { background:linear-gradient(135deg, #3A1A0A 0%, #6A2A10 100%); color:white; }
+
+.ih-eyebrow {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  opacity:0.5;
+  margin-bottom:10px;
+}
+
+.ih-title {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2rem,5vw,3.5rem);
+  font-weight:700;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.ih-dates {
+  font-size:14px;
+  opacity:0.65;
+  margin-bottom:20px;
+}
+
+.ih-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.ih-tag {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:4px 12px;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  border-radius:2px;
+}
+
+.ih-number {
+  font-family:'Playfair Display', serif;
+  font-size:120px;
+  font-weight:700;
+  opacity:0.06;
+  line-height:1;
+  position:absolute;
+  right:20px;
+  bottom:-10px;
+}
+
+.ih-stay-box {
+  background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.15);
+  padding:16px 20px;
+  border-radius:4px;
+  text-align:right;
+  flex-shrink:0;
+}
+
+.ih-stay-nights {
+  font-family:'Playfair Display', serif;
+  font-size:36px;
+  font-weight:700;
+  color:#F0C060;
+  line-height:1;
+}
+
+.ih-stay-label {
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.5;
+  margin-top:2px;
+}
+
+.ih-hotel-name {
+  font-size:12px;
+  opacity:0.7;
+  margin-top:8px;
+}
+
+/* ══ TIMELINE ══════════════════════════ */
+.timeline-wrap {
+  position:relative;
+  padding:0 0 0 60px;
+}
+
+.timeline-wrap::before {
+  content:'';
+  position:absolute;
+  left:20px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:linear-gradient(to bottom, var(--border) 0%, var(--border) 100%);
+}
+
+/* ══ DAY BLOCK ═════════════════════════ */
+.day-block {
+  position:relative;
+  margin-bottom:4px;
+}
+
+.day-marker {
+  position:absolute;
+  left:-50px;
+  top:20px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  border:3px solid var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:'Playfair Display', serif;
+  font-size:12px;
+  font-weight:700;
+  color:white;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  z-index:1;
+  flex-shrink:0;
+}
+
+.dm-praslin { background:var(--praslin); }
+.dm-digue   { background:var(--digue); }
+.dm-mahe    { background:var(--mahe); }
+.dm-transit { background:var(--transit); }
+
+.day-card {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 2px 12px rgba(42,32,24,0.05);
+  transition:box-shadow 0.2s;
+  margin-bottom:2px;
+}
+
+.day-card:hover { box-shadow:0 6px 24px rgba(42,32,24,0.1); }
+
+.day-card-header {
+  padding:16px 20px 12px;
+  border-bottom:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.day-date {
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+.day-title {
+  font-family:'Playfair Display', serif;
+  font-size:19px;
+  font-weight:700;
+  color:var(--text);
+  margin-top:2px;
+}
+
+.day-tagline {
+  font-size:11px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.day-meta {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.meta-chip {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  padding:3px 10px;
+  border-radius:2px;
+}
+
+.mc-praslin { background:var(--praslin-light); color:var(--praslin); border:1px solid rgba(26,122,94,0.2); }
+.mc-digue   { background:var(--digue-light); color:var(--digue); border:1px solid rgba(26,90,154,0.2); }
+.mc-mahe    { background:var(--mahe-light); color:var(--mahe); border:1px solid rgba(138,58,26,0.2); }
+.mc-transit { background:var(--transit-light); color:var(--transit); border:1px solid rgba(90,74,122,0.2); }
+.mc-weather { background:rgba(200,146,42,0.1); color:var(--gold); border:1px solid rgba(200,146,42,0.2); }
+.mc-veg     { background:rgba(74,138,42,0.1); color:var(--veg); border:1px solid rgba(74,138,42,0.2); }
+
+/* ══ ACTIVITIES ════════════════════════ */
+.activities-grid {
+  padding:16px 20px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:1px;
+}
+
+.activity-row {
+  display:grid;
+  grid-template-columns:64px 1fr auto;
+  gap:12px;
+  align-items:start;
+  padding:12px 0;
+  border-bottom:1px solid rgba(232,224,204,0.5);
+}
+
+.activity-row:last-child { border-bottom:none; }
+
+.act-time {
+  font-size:11px;
+  font-weight:600;
+  color:var(--stone);
+  padding-top:2px;
+  letter-spacing:0.5px;
+  white-space:nowrap;
+}
+
+.act-content { flex:1; }
+
+.act-name {
+  font-size:14px;
+  font-weight:500;
+  color:var(--text);
+  margin-bottom:3px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.act-icon { font-size:15px; }
+
+.act-note {
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.act-tip {
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  margin-top:5px;
+  font-size:10px;
+  padding:3px 9px;
+  background:var(--gold-light);
+  border:1px solid rgba(200,146,42,0.2);
+  color:var(--gold);
+  border-radius:2px;
+  font-weight:500;
+}
+
+.act-price {
+  font-size:12px;
+  font-weight:600;
+  color:var(--green-ok);
+  white-space:nowrap;
+  text-align:right;
+  padding-top:2px;
+}
+
+.act-price.free { color:var(--veg); }
+.act-price.expensive { color:var(--gold); }
+
+/* ══ VARIANTS ══════════════════════════ */
+.variants-section {
+  background:var(--warm);
+  border-top:1px solid var(--border);
+  padding:16px 20px;
+}
+
+.variants-title {
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--stone);
+  margin-bottom:10px;
+}
+
+.variants-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px, 1fr));
+  gap:8px;
+}
+
+.variant-card {
+  background:white;
+  border:1px solid var(--border);
+  padding:12px 14px;
+  border-radius:3px;
+}
+
+.variant-label {
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:4px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.va { color:#1A7A2A; }
+.vb { color:#1A4A8A; }
+.vc { color:#8A3A1A; }
+
+.variant-text {
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.variant-price {
+  font-size:11px;
+  font-weight:600;
+  color:var(--text);
+  margin-top:4px;
+}
+
+/* ══ RESTAURANT SECTION ════════════════ */
+.resto-section {
+  background:rgba(74,138,42,0.03);
+  border-top:1px solid rgba(74,138,42,0.12);
+  padding:14px 20px;
+}
+
+.resto-header {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:10px;
+}
+
+.resto-icon { font-size:14px; }
+.resto-title-txt {
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  color:var(--veg);
+}
+
+.resto-grid {
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+
+.resto-item {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:12px;
+  align-items:start;
+}
+
+.resto-name {
+  font-size:13px;
+  font-weight:500;
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.veg-badge {
+  font-size:8px;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:2px 6px;
+  background:rgba(74,138,42,0.1);
+  border:1px solid rgba(74,138,42,0.2);
+  color:var(--veg);
+  border-radius:2px;
+}
+
+.resto-desc {
+  font-size:11px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+.resto-price {
+  font-size:12px;
+  font-weight:600;
+  color:var(--text);
+  text-align:right;
+  white-space:nowrap;
+}
+
+.resto-price .pp {
+  font-size:9px;
+  color:var(--muted);
+  font-weight:300;
+}
+
+/* ══ TRANSIT CARD ══════════════════════ */
+.transit-card {
+  background:linear-gradient(135deg, rgba(90,74,122,0.06) 0%, rgba(90,74,122,0.02) 100%);
+  border:1px solid rgba(90,74,122,0.2);
+  padding:18px 20px;
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:16px;
+  align-items:center;
+  border-radius:4px;
+  margin-bottom:4px;
+}
+
+.transit-icon { font-size:28px; }
+
+.transit-title {
+  font-family:'Playfair Display', serif;
+  font-size:16px;
+  font-weight:700;
+  color:var(--transit);
+}
+
+.transit-detail {
+  font-size:11px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.transit-duration {
+  text-align:right;
+}
+
+.transit-time {
+  font-family:'Playfair Display', serif;
+  font-size:20px;
+  font-weight:700;
+  color:var(--transit);
+}
+
+.transit-label {
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--stone);
+}
+
+/* ══ INFO BOXES ════════════════════════ */
+.info-box {
+  padding:14px 18px;
+  border-radius:3px;
+  font-size:12px;
+  line-height:1.7;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  margin:4px 20px;
+}
+
+.info-box-icon { font-size:16px; flex-shrink:0; }
+.info-box-text { flex:1; }
+.info-box-title { font-weight:600; margin-bottom:3px; font-size:12px; }
+
+.ib-warn { background:rgba(192,58,42,0.06); border:1px solid rgba(192,58,42,0.15); color:var(--red-warn); }
+.ib-tip  { background:var(--gold-light); border:1px solid rgba(200,146,42,0.2); color:var(--gold); }
+.ib-info { background:var(--praslin-light); border:1px solid rgba(26,122,94,0.2); color:var(--praslin); }
+.ib-veg  { background:rgba(74,138,42,0.06); border:1px solid rgba(74,138,42,0.15); color:var(--veg); }
+
+/* ══ POPULARITY ════════════════════════ */
+.popularity {
+  display:inline-flex;
+  align-items:center;
+  gap:3px;
+  font-size:9px;
+  color:var(--stone);
+  margin-left:6px;
+}
+
+.pop-dot { width:5px; height:5px; border-radius:50%; }
+.pop-fill { background:var(--gold); }
+.pop-empty { background:var(--border); }
+
+/* ══ MINI MAP ══════════════════════════ */
+.mini-map-section {
+  background:var(--warm);
+  border-top:1px solid var(--border);
+  padding:16px 20px;
+}
+
+.mini-map-title {
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--stone);
+  margin-bottom:12px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.route-map {
+  display:flex;
+  align-items:center;
+  gap:0;
+  flex-wrap:wrap;
+  gap:4px;
+}
+
+.route-stop {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:3px;
+}
+
+.route-stop-dot {
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:2px solid white;
+  box-shadow:0 1px 4px rgba(0,0,0,0.2);
+}
+
+.route-stop-name {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:0.5px;
+  text-align:center;
+  max-width:70px;
+}
+
+.route-line {
+  height:2px;
+  width:30px;
+  background:var(--border);
+  position:relative;
+  top:-6px;
+}
+
+.route-time {
+  font-size:8px;
+  color:var(--muted);
+  position:absolute;
+  top:-14px;
+  left:50%;
+  transform:translateX(-50%);
+  white-space:nowrap;
+}
+
+/* ══ BUDGET SECTION ════════════════════ */
+.budget-section {
+  margin:60px 0;
+}
+
+.budget-wrap {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+  box-shadow:0 4px 20px rgba(42,32,24,0.07);
+}
+
+.budget-header {
+  background:var(--text);
+  color:var(--cream);
+  padding:24px 30px;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:20px;
+}
+
+.budget-header h2 {
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  font-weight:700;
+}
+
+.budget-header p {
+  font-size:11px;
+  opacity:0.5;
+  letter-spacing:1px;
+  margin-top:4px;
+}
+
+.total-badge {
+  text-align:right;
+}
+
+.total-amount {
+  font-family:'Playfair Display', serif;
+  font-size:32px;
+  font-weight:700;
+  color:#F0C060;
+  line-height:1;
+}
+
+.total-label {
+  font-size:9px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  opacity:0.4;
+  margin-top:3px;
+}
+
+.budget-islands {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border-bottom:1px solid var(--border);
+}
+
+.budget-island {
+  padding:16px 20px;
+  border-right:1px solid var(--border);
+}
+
+.budget-island:last-child { border-right:none; }
+
+.bi-label {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--stone);
+  margin-bottom:4px;
+}
+
+.bi-val {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  font-weight:700;
+}
+
+.bi-days {
+  font-size:10px;
+  color:var(--muted);
+  margin-top:2px;
+}
+
+.budget-rows {
+  padding:0;
+}
+
+.budget-cat-head {
+  background:var(--warm);
+  padding:10px 24px;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--stone);
+  display:grid;
+  grid-template-columns:1fr auto auto auto;
+  gap:16px;
+}
+
+.budget-row {
+  padding:13px 24px;
+  display:grid;
+  grid-template-columns:1fr auto auto auto;
+  gap:16px;
+  align-items:center;
+  border-bottom:1px solid rgba(232,224,204,0.5);
+  font-size:13px;
+}
+
+.budget-row:last-child { border-bottom:none; }
+
+.br-item {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:var(--text);
+}
+
+.br-icon { font-size:14px; flex-shrink:0; }
+
+.br-note {
+  font-size:10px;
+  color:var(--muted);
+  font-weight:300;
+  display:block;
+  margin-top:1px;
+}
+
+.br-island {
+  font-size:9px;
+  font-weight:600;
+  padding:2px 7px;
+  border-radius:2px;
+  white-space:nowrap;
+}
+
+.bri-p { background:var(--praslin-light); color:var(--praslin); }
+.bri-d { background:var(--digue-light); color:var(--digue); }
+.bri-m { background:var(--mahe-light); color:var(--mahe); }
+.bri-all { background:var(--warm); color:var(--stone); border:1px solid var(--border); }
+
+.br-min { color:var(--muted); text-align:right; font-size:12px; }
+.br-max { color:var(--text); text-align:right; font-size:12px; font-weight:500; }
+
+.budget-total-row {
+  background:var(--warm);
+  padding:18px 24px;
+  display:grid;
+  grid-template-columns:1fr auto auto auto;
+  gap:16px;
+  align-items:center;
+  border-top:2px solid var(--border);
+}
+
+.btr-label {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  font-weight:700;
+  color:var(--text);
+}
+
+.btr-min { color:var(--muted); font-size:16px; text-align:right; }
+.btr-max { color:var(--green-ok); font-family:'Playfair Display', serif; font-size:20px; font-weight:700; text-align:right; }
+
+.budget-verdict {
+  padding:16px 24px;
+  background:rgba(74,138,42,0.04);
+  border-top:1px solid rgba(74,138,42,0.12);
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.7;
+}
+
+.budget-verdict strong { color:var(--green-ok); }
+
+/* ══ PRACTICAL SECTION ════════════════ */
+.practical-section {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:4px;
+  overflow:hidden;
+  margin-bottom:60px;
+  box-shadow:0 2px 12px rgba(42,32,24,0.05);
+}
+
+.practical-header {
+  background:var(--warm);
+  padding:20px 24px;
+  border-bottom:1px solid var(--border);
+}
+
+.practical-header h2 {
+  font-family:'Playfair Display', serif;
+  font-size:22px;
+  font-weight:700;
+  color:var(--text);
+}
+
+.practical-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(260px, 1fr));
+  gap:0;
+}
+
+.practical-item {
+  padding:20px 22px;
+  border-right:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+}
+
+.practical-item:nth-last-child(-n+3) { border-bottom:none; }
+
+.pi-icon { font-size:22px; margin-bottom:8px; }
+.pi-title { font-size:13px; font-weight:600; color:var(--text); margin-bottom:4px; }
+.pi-text { font-size:11px; color:var(--muted); line-height:1.7; }
+.pi-text a { color:var(--praslin); text-decoration:none; }
+
+/* ══ CURRENCY BOX ═══════════════════════ */
+.fx-box {
+  background:rgba(200,146,42,0.12);
+  border:1px solid rgba(200,146,42,0.35);
+  border-radius:8px;
+  padding:18px 24px;
+  max-width:680px;
+  width:100%;
+  margin-bottom:36px;
+  text-align:left;
+}
+.fx-title {
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#F0C060;
+  margin-bottom:6px;
+}
+.fx-rate {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
+  font-weight:700;
+  color:#FEFAF2;
+  margin-bottom:10px;
+}
+.fx-trick {
+  background:rgba(0,0,0,0.2);
+  border-radius:4px;
+  padding:10px 14px;
+  font-size:12px;
+  color:rgba(255,255,255,0.8);
+  line-height:1.8;
+  margin-bottom:12px;
+}
+.fx-trick-label {
+  font-size:9px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:#F0C060;
+  display:block;
+  margin-bottom:4px;
+}
+.fx-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:4px;
+}
+.fx-item {
+  display:flex;
+  align-items:center;
+  gap:4px;
+  font-size:11px;
+}
+.fx-scr { color:rgba(255,255,255,0.5); }
+.fx-arrow { color:rgba(255,255,255,0.3); }
+.fx-chf { color:#F0C060; font-weight:600; }
+
+/* ══ ILLUSTRATIVE IMAGES ══════════════ */
+.excursion-imgs {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin:10px 0 4px;
+}
+.exc-img {
+  border-radius:4px;
+  height:90px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  text-align:center;
+  gap:4px;
+}
+.exc-img-icon { font-size:28px; line-height:1; }
+.exc-img-label {
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:white;
+  text-shadow:0 1px 4px rgba(0,0,0,0.5);
+  padding:0 6px;
+}
+.exc-img-sub {
+  font-size:8px;
+  color:rgba(255,255,255,0.7);
+  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+}
+/* Gradient themes per location */
+.img-vallee    { background:linear-gradient(135deg,#1A3A1A,#2A6A2A); }
+.img-lazio     { background:linear-gradient(135deg,#0A3A5A,#1A7A8A); }
+.img-stpierre  { background:linear-gradient(135deg,#0A2A5A,#1A5A9A); }
+.img-plongee   { background:linear-gradient(135deg,#0A1A4A,#0A4A7A); }
+.img-curieuse  { background:linear-gradient(135deg,#1A3A2A,#0A5A4A); }
+.img-iles      { background:linear-gradient(135deg,#0A3A6A,#1A6A8A); }
+.img-georgette { background:linear-gradient(135deg,#0A2A4A,#1A5A7A); }
+.img-source    { background:linear-gradient(135deg,#1A3A6A,#8A5A2A); }
+.img-sontsetsu { background:linear-gradient(135deg,#1A2A5A,#2A4A8A); }
+.img-petite    { background:linear-gradient(135deg,#1A4A3A,#0A6A5A); }
+.img-cocos     { background:linear-gradient(135deg,#0A3A4A,#1A6A6A); }
+.img-veuve     { background:linear-gradient(135deg,#1A3A1A,#3A5A1A); }
+.img-nid       { background:linear-gradient(135deg,#2A2A4A,#4A3A6A); }
+.img-victoria  { background:linear-gradient(135deg,#3A1A0A,#6A2A0A); }
+.img-bvallon   { background:linear-gradient(135deg,#0A3A5A,#1A6A7A); }
+.img-mission   { background:linear-gradient(135deg,#2A3A1A,#4A5A2A); }
+.img-intendance{ background:linear-gradient(135deg,#0A2A4A,#2A4A6A); }
+.img-eden      { background:linear-gradient(135deg,#3A2A0A,#6A4A1A); }
+.img-jardin    { background:linear-gradient(135deg,#1A3A1A,#2A5A2A); }
+.img-avion     { background:linear-gradient(135deg,#1A1A4A,#2A2A6A); }
+.img-ferry     { background:linear-gradient(135deg,#0A2A4A,#1A4A6A); }
+
+.variant-img {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+  margin:8px 0 4px;
+}
+.vimg {
+  border-radius:3px;
+  height:58px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  text-align:center;
+}
+.vimg-icon { font-size:20px; line-height:1; }
+.vimg-label { font-size:8px; font-weight:600; letter-spacing:0.5px; color:rgba(255,255,255,0.85); padding:0 4px; text-shadow:0 1px 3px rgba(0,0,0,0.5); }
+
+footer {
+  background:var(--text);
+  color:rgba(254,250,242,0.35);
+  text-align:center;
+  padding:30px;
+  font-size:10px;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+/* ══ SECTION SEPARATOR ═════════════════ */
+.island-separator {
+  height:60px;
+}
+
+/* ══ ANIMATIONS ════════════════════════ */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(16px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.fade-in { animation:fadeUp 0.5s ease both; }
+
+/* ══ RESPONSIVE ════════════════════════ */
+@media (max-width:640px) {
+  .timeline-wrap { padding-left:40px; }
+  .timeline-wrap::before { left:14px; }
+  .day-marker { left:-36px; width:28px; height:28px; font-size:10px; }
+  .activity-row { grid-template-columns:52px 1fr; }
+  .act-price { display:none; }
+  .island-header-inner { grid-template-columns:1fr; }
+  .ih-number { font-size:80px; }
+  .budget-row, .budget-cat-head, .budget-total-row { grid-template-columns:1fr auto; }
+  .budget-row > *:nth-child(3), .budget-cat-head > *:nth-child(3),
+  .budget-row > *:nth-child(2), .budget-total-row > *:nth-child(2) { display:none; }
+  .budget-islands { grid-template-columns:1fr; }
+  .budget-island { border-right:none; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-badge">🌊 Programme Voyage · Seychelles</div>
+  <h1>Seychelles<br><span>Octobre 2026</span></h1>
+  <p class="hero-sub">4 adultes · 9 jours · 3 îles · Un programme sur mesure</p>
+  <div class="hero-cards">
+    <div class="hero-card"><div class="hero-card-val">16→24</div><div class="hero-card-label">Octobre</div></div>
+    <div class="hero-card"><div class="hero-card-val">4</div><div class="hero-card-label">Adultes</div></div>
+    <div class="hero-card"><div class="hero-card-val">3</div><div class="hero-card-label">Îles</div></div>
+    <div class="hero-card"><div class="hero-card-val">8 nuits</div><div class="hero-card-label">Séjour</div></div>
+    <div class="hero-card"><div class="hero-card-val">🌿</div><div class="hero-card-label">Végétarien</div></div>
+  </div>
+  <div class="island-pills">
+    <div class="island-pill pill-praslin">🌴 Praslin · 4 nuits</div>
+    <div class="island-pill pill-digue">🚲 La Digue · 2 nuits</div>
+    <div class="island-pill pill-mahe">🏙️ Mahé · 2 nuits</div>
+  </div>
+  <!-- TAUX DE CHANGE -->
+  <div class="fx-box">
+    <div class="fx-title">💱 Taux de Change · Pense-bête</div>
+    <div class="fx-rate">1 CHF ≈ 15 SCR &nbsp;|&nbsp; 1 EUR ≈ 1 CHF</div>
+    <div class="fx-trick">
+      <span class="fx-trick-label">⚡ Astuce calcul rapide (approximation suffisante !)</span>
+      Prix en SCR → <strong>enlève un zéro</strong> → <strong>divise par 5</strong> → <strong>ajoute 10%</strong> → ≈ CHF<br>
+      <em>Ex : 750 SCR → 75 ÷ 5 = 15 + 10% ≈ <strong>16 CHF</strong> &nbsp;|&nbsp; 1500 SCR → 150 ÷ 5 = 30 + 10% ≈ <strong>33 CHF</strong></em>
+    </div>
+    <div class="fx-grid">
+      <div class="fx-item"><span class="fx-scr">150 SCR</span><span class="fx-arrow">→</span><span class="fx-chf">~3 CHF</span></div>
+      <div class="fx-item"><span class="fx-scr">500 SCR</span><span class="fx-arrow">→</span><span class="fx-chf">~11 CHF</span></div>
+      <div class="fx-item"><span class="fx-scr">750 SCR</span><span class="fx-arrow">→</span><span class="fx-chf">~16 CHF</span></div>
+      <div class="fx-item"><span class="fx-scr">1 000 SCR</span><span class="fx-arrow">→</span><span class="fx-chf">~22 CHF</span></div>
+      <div class="fx-item"><span class="fx-scr">2 000 SCR</span><span class="fx-arrow">→</span><span class="fx-chf">~44 CHF</span></div>
+      <div class="fx-item"><span class="fx-scr">5 000 SCR</span><span class="fx-arrow">→</span><span class="fx-chf">~110 CHF</span></div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">↓ Scroll</div>
+</section>
+
+<!-- ═══ STICKY NAV ══════════════════════════════════════════ -->
+<nav class="sticky-nav">
+  <div class="nav-section">
+    <div class="nav-dot" style="background:var(--transit)"></div>
+    <a href="#j16" class="nav-btn">16 Oct</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-dot" style="background:var(--praslin)"></div>
+    <a href="#j17" class="nav-btn">17</a>
+    <a href="#j18" class="nav-btn">18</a>
+    <a href="#j19" class="nav-btn">19</a>
+    <a href="#j20a" class="nav-btn">20</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-dot" style="background:var(--digue)"></div>
+    <a href="#j20b" class="nav-btn">20 (Digue)</a>
+    <a href="#j21" class="nav-btn">21</a>
+    <a href="#j22a" class="nav-btn">22</a>
+  </div>
+  <div class="nav-section">
+    <div class="nav-dot" style="background:var(--mahe)"></div>
+    <a href="#j22b" class="nav-btn">22 (Mahé)</a>
+    <a href="#j23" class="nav-btn">23</a>
+    <a href="#j24" class="nav-btn">24</a>
+  </div>
+  <div class="nav-section">
+    <a href="#budget" class="nav-btn" style="color:var(--gold);font-weight:600;">💰 Budget</a>
+  </div>
+  <div class="nav-section">
+    <a href="#packing" class="nav-btn">🎒 Packing</a>
+    <a href="#practical" class="nav-btn">🔧 Pratique</a>
+  </div>
+</nav>
+
+<div style="height:50px;"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PRASLIN
+══════════════════════════════════════════════════════════ -->
+<div class="container">
+  <section id="praslin" class="island-header">
+    <div class="island-header-inner ih-praslin">
+      <div>
+        <div class="ih-eyebrow">Île 1 sur 3</div>
+        <div class="ih-title">Praslin</div>
+        <div class="ih-dates">16 Octobre → 20 Octobre · 4 nuits</div>
+        <div class="ih-tags">
+          <span class="ih-tag">🌴 Vallée de Mai UNESCO</span>
+          <span class="ih-tag">🏖️ Anse Lazio</span>
+          <span class="ih-tag">🤿 Plongée</span>
+          <span class="ih-tag">🚗 Voiture de location</span>
+        </div>
+      </div>
+      <div class="ih-stay-box">
+        <div class="ih-stay-nights">4</div>
+        <div class="ih-stay-label">Nuits</div>
+        <div class="ih-hotel-name">🏠 Palm Holiday Apartments<br>Grand Anse · Cuisine équipée · Piscine</div>
+      </div>
+      <div class="ih-number">P</div>
+    </div>
+  </section>
+
+  <div class="island-separator"></div>
+
+  <div class="timeline-wrap">
+
+    <!-- ── J16 : ARRIVÉE ── -->
+    <div class="day-block" id="j16">
+      <div class="day-marker dm-transit">16</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--transit)">Vendredi 16 Octobre 2026</div>
+            <div class="day-title">Jour d'Arrivée — Cap sur Praslin</div>
+            <div class="day-tagline">Atterrissage 8h00 · Transfert ferry · Installation</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-transit">✈️ Transit</span>
+            <span class="meta-chip mc-praslin">🌴 Praslin</span>
+            <span class="meta-chip mc-weather">☀️ 29°C</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">08h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">✈️</span> Atterrissage Mahé — Seychelles Intl Airport</div>
+              <div class="act-note">Arrivée à l'aéroport international. Passage douanes & récupération bagages. Achetez une <strong>SIM Airtel</strong> dès la sortie (~900 SCR / ~60 CHF) — indispensable pour les maps et communications.</div>
+              <div class="act-tip">💡 SIM Card = votre première priorité en sortant de l'avion</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">09h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚌</span> Transfert aéroport → Jetée Inter-Islands (Victoria)</div>
+              <div class="act-note">Taxi depuis l'aéroport jusqu'au quai de départ des ferries à Victoria. ~10 min de trajet. Ou navette hôtel pré-arrangée avec Palm Holiday Apartments.</div>
+            </div>
+            <div class="act-price">~20 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">10h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚢</span> Ferry Mahé → Praslin <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="act-note">Traversée Cat Cocos : 1h environ. Vue sur l'archipel depuis le pont supérieur. Arrivée au port de Baie Sainte-Anne, Praslin.</div>
+              <div class="act-tip">⚠️ Réserver les billets à l'avance : Cat-Cocos.com · ~30€/pers aller</div>
+            </div>
+            <div class="act-price">~120 CHF ×4</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">11h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚗</span> Récupération voiture de location — Baie Sainte-Anne</div>
+              <div class="act-note">La voiture vous attend au port ou vous est livrée à l'arrivée du ferry. Seychelles Rentacar ou Majestic Cars — confirmer la veille. Conduite à gauche !</div>
+              <div class="act-tip">🚗 Remember : on roule à GAUCHE aux Seychelles</div>
+            </div>
+            <div class="act-price">~70 CHF/j</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">12h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🛒</span> Courses — Supermarché Baie Sainte-Anne</div>
+              <div class="act-note">C'est le plus grand supermarché de Praslin. Faites vos courses de base pour la semaine : fruits locaux (papaye, mangue, fruit de la passion), légumes, riz, pâtes, œufs, pain. Le marché est à côté du port.</div>
+              <div class="act-tip">🥭 Les fruits locaux sont excellents et peu chers ici</div>
+            </div>
+            <div class="act-price">~80 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">14h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏠</span> Check-in — Palm Holiday Apartments, Grand Anse</div>
+              <div class="act-note">~15 min de route depuis Baie Sainte-Anne. Appartements self-catering modernes avec cuisine équipée, piscine, balcon. 300m de la plage de Grand Anse. Note 9.5/10 Booking.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">16h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌅</span> Premier coucher de soleil — Plage de Grand Anse</div>
+              <div class="act-note">À 300m à pied. Sable jaune-orangé, horizon dégagé. Parfait après un long voyage pour se poser et admirer le coucher de soleil occidental.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">19h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Dîner — Cuisine maison ou Restaurant</div>
+              <div class="act-note">Après un long voyage, cuisine légère à l'appartement ou dîner au <strong>Beach House</strong> (5 min à pied, vue mer, curry végétarien disponible).</div>
+            </div>
+            <div class="act-price">0–40 CHF</div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header">
+            <span class="resto-icon">🌿</span>
+            <span class="resto-title-txt">Options Végétariennes ce soir</span>
+          </div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">🏠 Cuisine maison (recommandé J1) <span class="veg-badge">100% VEG</span></div>
+                <div class="resto-desc">Après le vol, simple et économique. Salade de fruits frais achetés au marché.</div>
+              </div>
+              <div class="resto-price">~5 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Beach House Restaurant <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Vue sur Grand Anse, cuisine créole et indienne. Curry légumes, dhal. Ambiance détendue.</div>
+              </div>
+              <div class="resto-price">20–25 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J17 : VALLÉE DE MAI + CÔTE D'OR ── -->
+    <div class="day-block" id="j17">
+      <div class="day-marker dm-praslin">17</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--praslin)">Samedi 17 Octobre 2026</div>
+            <div class="day-title">Vallée de Mai & Côte d'Or</div>
+            <div class="day-tagline">Forêt UNESCO · Coco de mer · Plage Anse Volbert</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-praslin">🌴 Praslin</span>
+            <span class="meta-chip mc-weather">☀️ 30°C</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">07h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌴</span> Vallée de Mai — Parc UNESCO <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-vallee"><div class="exc-img-icon">🥥</div><div class="exc-img-label">Coco de Mer</div><div class="exc-img-sub">Plus gros fruit du monde</div></div>
+                <div class="exc-img img-vallee" style="background:linear-gradient(135deg,#1A4A1A,#3A7A3A)"><div class="exc-img-icon">🦜</div><div class="exc-img-label">Perroquet Noir</div><div class="exc-img-sub">Oiseau endémique rare</div></div>
+              </div>
+              <div class="act-note">Arriver tôt (ouverture 8h) avant la chaleur et la foule. 20 min depuis Grand Anse. Forêt primaire unique au monde — les Coco de Mer (plus gros graines du règne végétal), perroquets noirs, lézards. Sentiers balisés, ~2h de balade tranquille.</div>
+              <div class="act-tip">💡 Arriver à l'ouverture 8h : fraîcheur + moins de monde + meilleures chances de voir le perroquet noir</div>
+            </div>
+            <div class="act-price">~100 CHF ×4</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">10h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Anse Volbert (Côte d'Or) — Baignade & snorkeling</div>
+              <div class="act-note">15 min de route. Longue plage de 1,5 km, eau peu profonde et calme, idéale pour nager. Snorkeling correct directement depuis la plage.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">13h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Déjeuner — Café des Arts ou Bonbon Plume (zone)</div>
+              <div class="act-note">Zone Côte d'Or bien équipée en restaurants. Options végétariennes disponibles partout.</div>
+            </div>
+            <div class="act-price">15–20 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">15h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">⛵</span> Excursion Île Saint-Pierre (snorkeling) <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-stpierre"><div class="exc-img-icon">🐢</div><div class="exc-img-label">Tortues marines</div><div class="exc-img-sub">Souvent à la surface</div></div>
+                <div class="exc-img img-stpierre" style="background:linear-gradient(135deg,#0A3A6A,#1A6A9A)"><div class="exc-img-icon">🐠</div><div class="exc-img-label">Corail granitique</div><div class="exc-img-sub">Unique au monde</div></div>
+              </div>
+              <div class="act-note">20 min en bateau depuis Côte d'Or. Minuscule île avec banc de corail exceptionnel — tortues, raies, requins de récif, nuages de poissons. Une des meilleures expériences snorkeling des Seychelles. Durée ~2h.</div>
+              <div class="act-tip">🐢 On voit souvent des tortues à la surface — spectaculaire</div>
+            </div>
+            <div class="act-price">~45 CHF ×4</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">18h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌅</span> Coucher de soleil depuis la terrasse Palm Holiday Apts</div>
+              <div class="act-note">Retour à l'appartement. Fin de journée en douceur au bord de la piscine ou sur le balcon.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+        </div>
+
+        <div class="variants-section">
+          <div class="variants-title">🔀 Variantes pour ce jour</div>
+          <div class="variants-grid">
+            <div class="variant-card">
+              <div class="variant-label va">▶ Option A — Programme du jour ✅</div>
+              <div class="variant-img">
+                <div class="vimg img-vallee"><div class="vimg-icon">🌴</div><div class="vimg-label">Vallée de Mai</div></div>
+                <div class="vimg img-stpierre"><div class="vimg-icon">⛵</div><div class="vimg-label">Île St-Pierre</div></div>
+              </div>
+              <div class="variant-text">Vallée de Mai le matin + Excursion Île St-Pierre l'après-midi (tel que décrit) — le programme idéal J1 Praslin</div>
+              <div class="variant-price">Budget : ~220 CHF pour 4</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vb">▶ Option B — Curieuse Island</div>
+              <div class="variant-img">
+                <div class="vimg img-vallee"><div class="vimg-icon">🌴</div><div class="vimg-label">Vallée de Mai</div></div>
+                <div class="vimg img-curieuse"><div class="vimg-icon">🐢</div><div class="vimg-label">Curieuse Island</div></div>
+              </div>
+              <div class="variant-text">Remplacer Île St-Pierre par <strong>Curieuse Island</strong> : réserve marine protégée, tortues géantes en liberté, plage de sable rouge unique. Plus rare et moins fréquentée.</div>
+              <div class="variant-price">Budget : ~240 CHF pour 4</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Dîner du soir — Végétarien Praslin</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Roots Juicery LAB <span class="veg-badge">100% VEGAN</span></div>
+                <div class="resto-desc">Entièrement vegan, smoothies, bowls, jus frais — la référence végétarienne de Praslin. Sur la Côte d'Or.</div>
+              </div>
+              <div class="resto-price">12–18 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Ma's Take Away <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Plats végétariens à prix mini. Curry légumes, dhal. Budget voyageur. Grand Anse.</div>
+              </div>
+              <div class="resto-price">8–12 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J18 : PLONGÉE + ANSE LAZIO ── -->
+    <div class="day-block" id="j18">
+      <div class="day-marker dm-praslin">18</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--praslin)">Dimanche 18 Octobre 2026</div>
+            <div class="day-title">🤿 Plongée Bouteille & Anse Lazio</div>
+            <div class="day-tagline">Baptême ou exploration · La plus belle plage de Praslin</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-praslin">🌴 Praslin</span>
+            <span class="meta-chip" style="background:rgba(26,90,154,0.1);color:var(--digue);border:1px solid rgba(26,90,154,0.2);">🤿 Plongée</span>
+            <span class="meta-chip mc-weather">☀️ 30°C · Mer calme</span>
+          </div>
+        </div>
+
+        <div class="info-box ib-info" style="margin:0 0 0 0; margin:12px 20px 4px;">
+          <div class="info-box-icon">🤿</div>
+          <div class="info-box-text">
+            <div class="info-box-title">Plongée Bouteille — Certifiés PADI/CMAS N1-2 · Octopus Divers Praslin (PADI 5★)</div>
+            Classé parmi les 100 meilleurs clubs de plongée au monde. Situé sur la plage de Côte d'Or. Pour plongeurs certifiés N1-2, les sites accessibles descendent jusqu'à <strong>20-25m</strong> : Île aux Cocos (coraux granitiques uniques au monde), Sister Rocks (requins nurses, raies léopard), Ave Maria Rocks (tortues vertes). Départ 9h30 · 2 plongées de 45-55 min · équipement fourni sur demande. <strong>Emporter votre carnet de plongée et certificat. Réserver 2-3 semaines à l'avance.</strong>
+            <div class="excursion-imgs" style="margin-top:10px;">
+              <div class="exc-img img-plongee"><div class="exc-img-icon">🤿</div><div class="exc-img-label">Coraux granitiques</div><div class="exc-img-sub">Site Île aux Cocos · 12-20m</div></div>
+              <div class="exc-img img-plongee" style="background:linear-gradient(135deg,#0A1A5A,#0A3A8A)"><div class="exc-img-icon">🦈</div><div class="exc-img-label">Requin Nurse</div><div class="exc-img-sub">Inoffensif · Sister Rocks</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">08h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🤿</span> Briefing & équipement — Octopus Divers, Côte d'Or</div>
+              <div class="act-note">Arriver 30 min avant le départ. Essayage combinaisons, briefing sécurité. L'équipe parle français.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">09h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">⛵</span> Plongée bouteille × 2 plongées <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="act-note">2 plongées de 45-60 min avec guide. Sites près des îles du nord : coraux, tortues, poissons perroquets, raies léopard. Équipement complet inclus. Retour vers 13h00.</div>
+              <div class="act-tip">🐠 Octobre = excellente visibilité (25-30m) — période de transition idéale</div>
+            </div>
+            <div class="act-price">~75 CHF ×4</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">13h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Déjeuner — Pique-nique ou snack Côte d'Or</div>
+              <div class="act-note">Après la plongée, manger léger. Snack bar ou achats en supérette à proximité.</div>
+            </div>
+            <div class="act-price">~8 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">15h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Anse Lazio — La plus belle plage de Praslin <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-lazio"><div class="exc-img-icon">🏖️</div><div class="exc-img-label">Sable argenté</div><div class="exc-img-sub">Eau turquoise · Top 10 mondial</div></div>
+                <div class="exc-img img-lazio" style="background:linear-gradient(135deg,#1A4A5A,#2A7A8A)"><div class="exc-img-icon">🪨</div><div class="exc-img-label">Rochers granitiques</div><div class="exc-img-sub">Lumière dorée en fin de journée</div></div>
+              </div>
+              <div class="act-note">25 min depuis Côte d'Or. Arriver en fin d'après-midi = moins de monde + lumière parfaite pour photos. Sable argenté, eau turquoise, rochers granitiques. Snorkeling côté droit. Parking payant 100 SCR.</div>
+              <div class="act-tip">📸 Lumière de fin d'après-midi sur les rochers = photos magiques</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">17h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌅</span> Coucher de soleil — Anse Lazio ou côte nord-ouest</div>
+              <div class="act-note">Anse Lazio est orientée nord-ouest — la lumière dorée sur les rochers granitiques en fin de journée est inoubliable. Restez jusqu'au crépuscule.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">20h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Dîner — Retour Grand Anse</div>
+              <div class="act-note">Après une journée intensive, dîner à l'appartement ou sortie au Lobster Bay (végétarien possible sur demande).</div>
+            </div>
+            <div class="act-price">0–25€</div>
+          </div>
+        </div>
+
+        <div class="variants-section">
+          <div class="variants-title">🔀 Variantes plongée — Certifiés PADI/CMAS N1-2</div>
+          <div class="variants-grid">
+            <div class="variant-card">
+              <div class="variant-label va">▶ Option A — 2 plongées classiques ✅ Recommandé</div>
+              <div class="variant-img">
+                <div class="vimg img-plongee"><div class="vimg-icon">🪸</div><div class="vimg-label">Île aux Cocos</div></div>
+                <div class="vimg img-plongee" style="background:linear-gradient(135deg,#0A1A4A,#0A3A6A)"><div class="vimg-icon">🐢</div><div class="vimg-label">Sister Rocks</div></div>
+              </div>
+              <div class="variant-text">Île aux Cocos + Sister Rocks. Profondeur 12-20m. Coraux granitiques, tortues vertes, raies léopard, requins nurses inoffensifs. Visibilité 25-30m en octobre. ~75 CHF/pers.</div>
+              <div class="variant-price">~300 CHF pour 4</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vb">▶ Option B — Night Dive</div>
+              <div class="variant-img">
+                <div class="vimg img-plongee" style="background:linear-gradient(135deg,#050A1A,#0A1A3A)"><div class="vimg-icon">🌙</div><div class="vimg-label">Plongée nocturne</div></div>
+                <div class="vimg img-plongee" style="background:linear-gradient(135deg,#0A0A2A,#1A1A4A)"><div class="vimg-icon">🐙</div><div class="vimg-label">Raies / Pieuvres</div></div>
+              </div>
+              <div class="variant-text">Plongée nocturne organisée depuis Côte d'Or. Pieuvres, homards, raies dormantes, poissons aux couleurs nocturnes. Expérience unique. ~85 CHF/pers. Niveau N1-2 suffisant.</div>
+              <div class="variant-price">~340 CHF pour 4</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vc">▶ Option C — Félicité Island</div>
+              <div class="variant-img">
+                <div class="vimg img-plongee" style="background:linear-gradient(135deg,#0A2A4A,#0A4A7A)"><div class="vimg-icon">🐡</div><div class="vimg-label">Félicité Island</div></div>
+                <div class="vimg img-plongee" style="background:linear-gradient(135deg,#0A1A3A,#1A3A6A)"><div class="vimg-icon">🦈</div><div class="vimg-label">Murènes · Napoléons</div></div>
+              </div>
+              <div class="variant-text">Site plus éloigné, plus sauvage. Murènes, barracudas, napoléons. Plus technique, parfait pour N2. Demander à Octopus selon conditions du jour.</div>
+              <div class="variant-price">~320 CHF pour 4</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Dîner — Anse Lazio / Grand Anse</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Bonbon Plume Restaurant (Anse Lazio) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Sur la plage d'Anse Lazio. Cuisine créole, plats végétariens marqués au menu. Vue mer directe. Réserver.</div>
+              </div>
+              <div class="resto-price">30–40 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Lobster Bay (Grand Anse) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Près de Palm Holiday. Curry végétarien, grillades légumes. Bon rapport qualité-prix pour Praslin.</div>
+              </div>
+              <div class="resto-price">20–28 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J19 : ÎLES DU NORD EXCURSION ── -->
+    <div class="day-block" id="j19">
+      <div class="day-marker dm-praslin">19</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--praslin)">Lundi 19 Octobre 2026</div>
+            <div class="day-title">Excursion Îles du Nord & Anse Georgette</div>
+            <div class="day-tagline">Félicité · Sister Islands · Plages sauvages · Snorkeling</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-praslin">🌴 Praslin</span>
+            <span class="meta-chip mc-weather">☀️ 29°C</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">07h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌅</span> Anse Lazio au lever du soleil (optionnel mais magique)</div>
+              <div class="act-note">25 min de route. La plage est déserte avant 9h. Lumière dorée du matin sur les rochers granitiques. Moment de pure magie.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">09h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">⛵</span> Excursion bateau — Îles du nord (Félicité, Cocos, Sisters) <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-iles"><div class="exc-img-icon">🏝️</div><div class="exc-img-label">Sister Islands</div><div class="exc-img-sub">Plage vierge inaccessible</div></div>
+                <div class="exc-img img-iles" style="background:linear-gradient(135deg,#0A3A5A,#1A5A8A)"><div class="exc-img-icon">🐠</div><div class="exc-img-label">Île aux Cocos</div><div class="exc-img-sub">Meilleur snorkeling Seychelles</div></div>
+              </div>
+              <div class="act-note">Demi-journée ou journée complète en bateau privatisé ou partagé depuis Côte d'Or. Programme type : snorkeling Île aux Cocos (exceptionnel), plage vierge Sister Island, pause déjeuner. Pique-nique ou repas à bord selon formule.</div>
+              <div class="act-tip">🐠 Île aux Cocos = meilleur spot snorkeling des Seychelles intérieures · Tortues vertes garanties</div>
+            </div>
+            <div class="act-price">~55 CHF ×4</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">14h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Anse Georgette — Accès via Constance Lemuria</div>
+              <div class="act-note">En rentrant de l'excursion, détour par Anse Georgette. L'hôtel Constance Lemuria contrôle l'accès — se présenter à la réception (non-résidents acceptés en général, selon affluence). Plage à couper le souffle, quasi-déserte.</div>
+              <div class="act-tip">⚠️ Appeler Lemuria à l'avance : +248 4 292 000 pour confirmer l'accès non-résidents</div>
+            </div>
+            <div class="act-price free">Gratuit*</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">17h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏊</span> Retour Palm Holiday — Piscine & détente</div>
+              <div class="act-note">Dernière soirée complète à Praslin. Détente méritée.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">19h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Dîner de groupe — Restaurant Côte d'Or</div>
+              <div class="act-note">Dernière soirée à Praslin — faire une vraie sortie en groupe au restaurant.</div>
+            </div>
+            <div class="act-price">20–28 CHF</div>
+          </div>
+        </div>
+
+        <div class="variants-section">
+          <div class="variants-title">🔀 Alternatives excursion îles</div>
+          <div class="variants-grid">
+            <div class="variant-card">
+              <div class="variant-label va">▶ Option A — Curieuse Island</div>
+              <div class="variant-img">
+                <div class="vimg img-curieuse"><div class="vimg-icon">🐢</div><div class="vimg-label">Tortues géantes</div></div>
+                <div class="vimg img-curieuse" style="background:linear-gradient(135deg,#0A4A3A,#1A6A5A)"><div class="vimg-icon">🏖️</div><div class="vimg-label">Plage sable rouge</div></div>
+              </div>
+              <div class="variant-text">Réserve marine protégée avec tortues géantes en liberté, mangroves, plage de sable rouge unique. Plus intimiste. ~50 CHF/pers.</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vb">▶ Option B — Cocos + Sisters ✅ Recommandé</div>
+              <div class="variant-img">
+                <div class="vimg img-iles"><div class="vimg-icon">🐠</div><div class="vimg-label">Île aux Cocos</div></div>
+                <div class="vimg img-iles" style="background:linear-gradient(135deg,#0A2A5A,#1A4A7A)"><div class="vimg-icon">🏝️</div><div class="vimg-label">Sister Islands</div></div>
+              </div>
+              <div class="variant-text">Le classique et le meilleur pour le snorkeling. Plus fréquenté mais justifié par la qualité de la vie marine.</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vc">▶ Option C — Journée libre Anse Lazio</div>
+              <div class="variant-img">
+                <div class="vimg img-lazio"><div class="vimg-icon">🏖️</div><div class="vimg-label">Anse Lazio</div></div>
+                <div class="vimg img-lazio" style="background:linear-gradient(135deg,#1A4A5A,#2A7A8A)"><div class="vimg-icon">😌</div><div class="vimg-label">Journée zen</div></div>
+              </div>
+              <div class="variant-text">Si fatigue des jours précédents : journée zen à Anse Lazio + déjeuner sur place + snorkeling côté rochers. Gratuit.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Dîner — Dernière soirée Praslin</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Café des Arts (Côte d'Or) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Cadre magnifique sur la plage. Menu végétarien avec options indiennes et créoles. Ambiance artistique unique.</div>
+              </div>
+              <div class="resto-price">25–35 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J20 MATIN : DÉPART PRASLIN ── -->
+    <div class="day-block" id="j20a">
+      <div class="day-marker dm-transit">20</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--transit)">Mardi 20 Octobre 2026 — Matin</div>
+            <div class="day-title">Départ Praslin → La Digue</div>
+            <div class="day-tagline">Checkout · Rendre la voiture · Ferry matinal</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-transit">🚢 Transit</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">07h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌅</span> Dernier petit-déjeuner & checkout Palm Holiday</div>
+              <div class="act-note">Préparez les bagages la veille. Checkout à 11h max — arrangement possible avec la réception pour garder les bagages si besoin.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">09h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚗</span> Rendre la voiture — Port Baie Sainte-Anne</div>
+              <div class="act-note">Retour véhicule au loueur au port. Prévoir 30 min pour l'état des lieux.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">10h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚢</span> Ferry Praslin → La Digue (Inter Island Ferry)</div>
+              <div class="act-note">15-20 min de traversée. Départ depuis Baie Sainte-Anne Jetty. Arrivée à La Passe, La Digue. Plusieurs horaires disponibles (9h, 10h, 11h45). Préférez le 9h00 ou 10h00.</div>
+              <div class="act-tip">⚠️ Embarquement ferme 10 min avant départ — soyez là 20 min à l'avance</div>
+            </div>
+            <div class="act-price">~15 CHF ×4</div>
+          </div>
+        </div>
+
+        <div class="transit-card">
+          <div class="transit-icon">🚢</div>
+          <div>
+            <div class="transit-title">Traversée Praslin → La Digue</div>
+            <div class="transit-detail">Inter Island Ferry · Baie Sainte-Anne → La Passe<br>Horaires : 7h00 · 9h00 · 10h00 · 11h45 · 14h30 (lundi-vendredi)</div>
+          </div>
+          <div class="transit-duration">
+            <div class="transit-time">15 min</div>
+            <div class="transit-label">Traversée</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline-wrap praslin -->
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     LA DIGUE
+══════════════════════════════════════════════════════════ -->
+<div class="container">
+  <section id="digue" class="island-header">
+    <div class="island-header-inner ih-digue">
+      <div>
+        <div class="ih-eyebrow">Île 2 sur 3</div>
+        <div class="ih-title">La Digue</div>
+        <div class="ih-dates">20 Octobre → 22 Octobre · 2 nuits</div>
+        <div class="ih-tags">
+          <span class="ih-tag">🚲 Tout à vélo</span>
+          <span class="ih-tag">📸 Anse Source d'Argent</span>
+          <span class="ih-tag">🌴 L'Union Estate</span>
+          <span class="ih-tag">🥤 Stands smoothies</span>
+        </div>
+      </div>
+      <div class="ih-stay-box">
+        <div class="ih-stay-nights">2</div>
+        <div class="ih-stay-label">Nuits</div>
+        <div class="ih-hotel-name">🏨 Le Relax Beach House<br>Anse Réunion · Face mer · P-déj inclus<br>⚠️ Pas de cuisine — resto sur place</div>
+      </div>
+      <div class="ih-number">D</div>
+    </div>
+  </section>
+
+  <div class="island-separator"></div>
+
+  <div class="timeline-wrap">
+
+    <!-- ── J20 APRÈS-MIDI : ARRIVÉE DIGUE ── -->
+    <div class="day-block" id="j20b">
+      <div class="day-marker dm-digue">20</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--digue)">Mardi 20 Octobre 2026 — Après-midi</div>
+            <div class="day-title">Arrivée La Digue & Anse Source d'Argent</div>
+            <div class="day-tagline">Check-in · Vélos · Plage iconique en lumière dorée</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-digue">🚲 La Digue</span>
+            <span class="meta-chip mc-weather">☀️ 29°C</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">10h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏨</span> Check-in — Le Relax Beach House, Anse Réunion</div>
+              <div class="act-note">5 min à pied du port. Hôtel sur la plage d'Anse Réunion. Personnel très accueillant, nourriture végétarienne excellente sur place (restaurant indien en plus de la cuisine créole).</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">11h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚲</span> Location vélos électriques × 4</div>
+              <div class="act-note">À la réception du Relax Beach House ou au port. Vélos électriques recommandés — les petites côtes de l'île sont plus faciles ainsi. ~150 SCR/jour/vélo.</div>
+              <div class="act-tip">⚡ Vélo électrique = game changer sur les montées vers Anse Source d'Argent</div>
+            </div>
+            <div class="act-price">~12 CHF ×4/j<br><small style="color:var(--muted);font-size:9px;">~180 SCR/j</small></div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">12h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🥤</span> Stands smoothies & Glorious Bakery — tour du village</div>
+              <div class="act-note">Tour du centre à vélo. La Digue est connue pour ses stands de jus de fruits frais et smoothies tropicaux en bord de route. Glorious Bakery (près du port) : samosas végétariens, pains locaux. Excellents et bon marché.</div>
+              <div class="act-tip">🥭 Smoothie coco-mangue-fruit de la passion = incontournable</div>
+            </div>
+            <div class="act-price">3–5 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">15h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">📸</span> Anse Source d'Argent — Lumière de fin d'après-midi <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-source"><div class="exc-img-icon">🪨</div><div class="exc-img-label">Rochers Roses</div><div class="exc-img-sub">La plage la + photographiée</div></div>
+                <div class="exc-img img-source" style="background:linear-gradient(135deg,#2A4A7A,#4A6A2A)"><div class="exc-img-icon">🏊</div><div class="exc-img-label">Lagon cristallin</div><div class="exc-img-sub">Eau turquoise protégée</div></div>
+              </div>
+              <div class="act-note">800m à vélo depuis le Relax. Accès via L'Union Estate (~10€/pers). La plage la + photographiée au monde. Rochers granitiques roses, eau cristalline. Arrivée à 15h-16h = lumière chaude oblique sur les rochers, moins de touristes. La baignade côté gauche est calme. Durée conseillée : 2-3h.</div>
+              <div class="act-tip">📸 Avancez jusqu'au bout de la plage (20 min de marche sur sable) pour les + beaux rochers et moins de monde</div>
+            </div>
+            <div class="act-price">~40 CHF ×4<br><small style="color:var(--muted);font-size:9px;">~150 SCR/pers</small></div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">17h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🐢</span> Tortues géantes — L'Union Estate</div>
+              <div class="act-note">En rentrant d'Anse Source d'Argent (inclus dans le billet d'entrée). Les tortues géantes d'Aldabra se promènent librement dans le parc. Possibilité de les approcher de très près.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">18h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌅</span> Coucher de soleil — Anse Sévère (nord de l'île)</div>
+              <div class="act-note">20 min à vélo vers le nord. La meilleure plage de La Digue pour voir le soleil se coucher sur Praslin. Vue spectaculaire à ne pas manquer.</div>
+              <div class="act-tip">🌅 Le coucher de soleil avec Praslin en silhouette = image inoubliable</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Dîner La Digue — Végétarien</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Le Relax Beach House Restaurant <span class="veg-badge">VEG ✓✓</span></div>
+                <div class="resto-desc">Hôtel d'appartenance indienne — excellente cuisine végétarienne indienne et créole. Un voyageur a témoigné : "cuisine végétarienne remarquable, légumes frais du marché tous les jours". Sur place.</div>
+              </div>
+              <div class="resto-price">18–25 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J21 : TOUR COMPLET À VÉLO ── -->
+    <div class="day-block" id="j21">
+      <div class="day-marker dm-digue">21</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--digue)">Mercredi 21 Octobre 2026</div>
+            <div class="day-title">Tour de l'Île à Vélo Électrique</div>
+            <div class="day-tagline">Petite Anse · Réserve de la Veuve · Nid d'Aigle · Anse Cocos</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-digue">🚲 La Digue</span>
+            <span class="meta-chip mc-weather">☀️ 29°C</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">06h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">⛰️</span> Nid d'Aigle (333m) — <em style="color:var(--gold);font-size:11px;">Optionnel · Niveau modéré</em></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-nid"><div class="exc-img-icon">⛰️</div><div class="exc-img-label">Nid d'Aigle</div><div class="exc-img-sub">Panorama 360° archipel</div></div>
+                <div class="exc-img img-nid" style="background:linear-gradient(135deg,#1A2A5A,#3A5A8A)"><div class="exc-img-icon">🌅</div><div class="exc-img-label">Vue au lever du soleil</div><div class="exc-img-sub">La Digue · Praslin · Félicité</div></div>
+              </div>
+              <div class="act-note">Départ AVANT 7h impératif (chaleur). 45 min de montée à pied sur chemin pentu mais balisé — effort raisonnable si rythme lent. Panorama à 360° sur tout l'archipel. <strong>Alternative si pas envie :</strong> Anse Sévère au lever du soleil (plat, à vélo, 20 min) — vue sur Praslin tout aussi magnifique.</div>
+              <div class="act-tip">💡 Niveau modéré : prendre son temps, s'arrêter, apporter eau fraîche · Chaussures fermées conseillées</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">08h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🐦</span> Réserve de la Veuve — Tchitrec des Seychelles</div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-veuve"><div class="exc-img-icon">🐦</div><div class="exc-img-label">Tchitrec des Seychelles</div><div class="exc-img-sub">Queue blanche · endémique</div></div>
+                <div class="exc-img img-veuve" style="background:linear-gradient(135deg,#1A4A1A,#2A6A3A)"><div class="exc-img-icon">🌳</div><div class="exc-img-label">Forêt protégée</div><div class="exc-img-sub">Seul site de nidification</div></div>
+              </div>
+              <div class="act-note">20 ha de forêt protégée. Seul endroit au monde où vit et niche le Tchitrec des Seychelles — queue blanche spectaculaire. Sentier facile, ~45 min. Accès gratuit. Oiseau actif tôt le matin.</div>
+              <div class="act-tip">🐦 Meilleures chances de voir le Tchitrec entre 7h et 9h — être silencieux</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">10h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🥤</span> Pause stands de smoothies — Tour sud de l'île à vélo</div>
+              <div class="act-note">En route vers la côte est, nombreux stands de jus et smoothies en bord de route. Essayez le jus de citronelle local et le smoothie noix de coco fraîche.</div>
+            </div>
+            <div class="act-price">3–5 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">11h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Grand Anse → sentier côtier → Petite Anse <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-petite"><div class="exc-img-icon">🌿</div><div class="exc-img-label">Petite Anse</div><div class="exc-img-sub">Plage vierge sauvage</div></div>
+                <div class="exc-img img-cocos"><div class="exc-img-icon">🏊</div><div class="exc-img-label">Anse Cocos</div><div class="exc-img-sub">Piscines naturelles</div></div>
+              </div>
+              <div class="act-note">Vélos garés à Grand Anse. 30 min de sentier côtier boisé pour atteindre Petite Anse. Plage vierge spectaculaire, pas de baignade (courants) mais idéale pour photos et pique-nique. Peu fréquentée le matin.</div>
+              <div class="act-tip">🥪 Emportez pique-nique et eau — aucun service sur place</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">13h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏊</span> Anse Cocos — Piscines naturelles <em style="color:var(--gold);font-size:11px;">Optionnel · 45 min supplémentaires</em></div>
+              <div class="act-note">45 min de marche supplémentaires depuis Petite Anse sur sentier plat côtier. Piscines naturelles entre les rochers — baignade protégée divine. À faire si énergie suffisante après le matin. <strong>Sinon :</strong> faire demi-tour depuis Petite Anse et rentrer à vélo confortablement.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">15h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚲</span> Retour à vélo — Plantation House & visite coloniale</div>
+              <div class="act-note">Sur le chemin retour, arrêt à la Plantation House (monument national classé). Maison coloniale du 19e siècle, musée libre. 30 min.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">17h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Baignade — Anse La Réunion (devant le Relax)</div>
+              <div class="act-note">Plage calme devant l'hôtel. Eau tranquille, parfaite pour se délasser après la journée.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Restaurants La Digue — Végétarien</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Snack Bellevue (Nid d'Aigle) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">En haut des hauteurs, vue panoramique, curry légumes et grillades. Ouvert 9h-22h. Idéal déjeuner après randonnée.</div>
+              </div>
+              <div class="resto-price">12–18 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Chez Jules (Anse Banane) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Ambiance locale, curry créole, jus de fruits frais. Bon marché, terrasse sympa. Cuisine végétarienne disponible.</div>
+              </div>
+              <div class="resto-price">12–16 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Le Repaire Restaurant (La Passe) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Vue sur la mer, cuisine créole et internationale. Options végétariennes. Atmosphère romantique en soirée.</div>
+              </div>
+              <div class="resto-price">22–30 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J22 MATIN : DÉPART DIGUE ── -->
+    <div class="day-block" id="j22a">
+      <div class="day-marker dm-transit">22</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--transit)">Jeudi 22 Octobre 2026 — Matin</div>
+            <div class="day-title">Dernier Matin La Digue → Mahé</div>
+            <div class="day-tagline">Anse Patates · Ferry · Voiture Mahé</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-transit">🚢 Transit</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">07h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🐠</span> Anse Patates (nord) — Snorkeling matinal calme</div>
+              <div class="act-note">Petite plage calme protégée par récif, bonne vie marine. 20 min à vélo. Profiter d'un dernier bain tranquille avant de partir.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">10h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚲</span> Retour port + rendre les vélos</div>
+              <div class="act-note">Rendre les vélos au loueur ou à l'hôtel. Récupérer les bagages au Relax Beach House.</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">11h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚢</span> Ferry La Digue → Mahé — Option Standard ✅ Recommandé</div>
+              <div class="act-note">Ferry direct La Digue → Mahé via Cat Cocos. Durée totale ~1h45. Départs depuis La Passe : <strong>7h00, 11h00</strong> (vérifier cat-cocos.com). Avec 4 bagages 20 kg, prévoir d'arriver 20 min avant. Embarquement prioritaire si réservé en ligne.</div>
+              <div class="act-tip">💡 Réserver les 4 billets retour à l'avance — cat-cocos.com · ~35 CHF/pers</div>
+            </div>
+            <div class="act-price">~140 CHF ×4</div>
+          </div>
+        </div>
+
+        <!-- VARIANTE AVION -->
+        <div class="variants-section">
+          <div class="variants-title">✈️ Variante Retour — Par Avion depuis La Digue</div>
+          <div style="padding:0 16px 12px;font-size:11px;color:var(--muted);line-height:1.6;">Deux options aériennes existent. <strong>Pas de vol direct La Digue → Mahé</strong> : l'aéroport de La Digue (small strip) n'opère pas de ligne commerciale régulière en 2026. La solution avion passe donc obligatoirement par Praslin.</div>
+          <div class="variants-grid">
+            <div class="variant-card">
+              <div class="variant-label vb">✈️ Option Avion — La Digue → Praslin (bateau) → Mahé (avion)</div>
+              <div class="variant-img">
+                <div class="vimg img-ferry"><div class="vimg-icon">🚢</div><div class="vimg-label">Ferry 15 min</div></div>
+                <div class="vimg img-avion"><div class="vimg-icon">✈️</div><div class="vimg-label">Vol Praslin→Mahé</div></div>
+              </div>
+              <div class="variant-text">
+                <strong>Étape 1 :</strong> Ferry La Digue → Praslin · Inter Island · 15-20 min · ~15 CHF/pers<br>
+                <strong>Étape 2 :</strong> Vol Praslin (PRI) → Mahé (SEZ) · Air Seychelles · 15 min de vol<br><br>
+                <strong>Air Seychelles / Island Air :</strong><br>
+                • Horaires : environ 7h00, 9h00, 11h00, 13h00, 15h00 (vérifier airseychelles.com)<br>
+                • Tarif : ~80-120 CHF/pers aller · Pour 4 : <strong>320–480 CHF</strong><br>
+                • Bagages : <strong>20 kg inclus</strong> en soute (confirmer à la réservation)<br>
+                • Durée porte-à-porte : ~2h (ferry + attente aéroport Praslin + vol)<br><br>
+                ⚠️ Avantage : pas de mer agitée, pas de 1h45 en ferry. Idéal si mal des transports.<br>
+                ⚠️ Inconvénient : 2× plus cher que le ferry · Contraintes horaires plus rigides
+              </div>
+              <div class="variant-price">~380–540 CHF pour 4 (vs ~140 CHF ferry)</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vc">🚢 Option Ferry Direct — La Digue → Mahé (Cat Cocos)</div>
+              <div class="variant-img">
+                <div class="vimg img-ferry"><div class="vimg-icon">🌊</div><div class="vimg-label">1h45 de mer</div></div>
+                <div class="vimg img-ferry" style="background:linear-gradient(135deg,#0A3A4A,#1A5A6A)"><div class="vimg-icon">🧳</div><div class="vimg-label">Bagages en soute</div></div>
+              </div>
+              <div class="variant-text">
+                <strong>Cat Cocos :</strong> La Passe → Victoria · Départs ~7h00 et 11h00<br>
+                Durée : 1h45 · Climatisé · Pont supérieur panoramique<br>
+                Bagages : acceptés sans supplément (max 25 kg/pers)<br>
+                Tarif : ~35 CHF/pers · Pour 4 : <strong>~140 CHF</strong><br><br>
+                ✅ Recommandé si temps calme (octobre = généralement bon)<br>
+                ⚠️ En cas de houle : privilégier l'option avion via Praslin
+              </div>
+              <div class="variant-price">~140 CHF pour 4 ✅ Économique</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">13h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚗</span> Récupération voiture — Victoria ou aéroport Mahé</div>
+              <div class="act-note">Voiture pré-réservée. Seychelles Rentacar livre à l'Inter-Island Jetty de Victoria. Conduite à gauche — 2e île, même règle !</div>
+            </div>
+            <div class="act-price">~70 CHF/j</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline digue -->
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAHÉ
+══════════════════════════════════════════════════════════ -->
+<div class="container">
+  <section id="mahe" class="island-header">
+    <div class="island-header-inner ih-mahe">
+      <div>
+        <div class="ih-eyebrow">Île 3 sur 3</div>
+        <div class="ih-title">Mahé</div>
+        <div class="ih-dates">22 Octobre → 24 Octobre · 2 nuits</div>
+        <div class="ih-tags">
+          <span class="ih-tag">🏙️ Victoria</span>
+          <span class="ih-tag">🏖️ Beau Vallon</span>
+          <span class="ih-tag">🌿 Jardin Botanique</span>
+          <span class="ih-tag">🌄 Mission Lodge</span>
+        </div>
+      </div>
+      <div class="ih-stay-box">
+        <div class="ih-stay-nights">2</div>
+        <div class="ih-stay-label">Nuits</div>
+        <div class="ih-hotel-name">🏠 Naturalis Oceanview Residences<br>La Louise · Vue océan · Piscine<br>Note 9.7/10 · Roland accueil</div>
+      </div>
+      <div class="ih-number">M</div>
+    </div>
+  </section>
+
+  <div class="island-separator"></div>
+
+  <div class="timeline-wrap">
+
+    <!-- ── J22 APRÈS-MIDI : ARRIVÉE MAHÉ ── -->
+    <div class="day-block" id="j22b">
+      <div class="day-marker dm-mahe">22</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--mahe)">Jeudi 22 Octobre 2026 — Après-midi</div>
+            <div class="day-title">Arrivée Mahé · Victoria & Beau Vallon</div>
+            <div class="day-tagline">Check-in · Marché · Coucher de soleil Beau Vallon</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-mahe">🏙️ Mahé</span>
+            <span class="meta-chip mc-weather">☀️ 29°C</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">14h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏠</span> Check-in — Naturalis Oceanview Residences</div>
+              <div class="act-note">La Louise, quartier résidentiel en hauteur. Roland vous accueille personnellement — il donne d'excellents conseils personnalisés sur les spots locaux. Vue sur Eden Island et la baie de Victoria depuis la terrasse. 5 min de Victoria en voiture.</div>
+              <div class="act-tip">💡 Demandez à Roland ses recommandations personnelles de restaurants végétariens locaux</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">15h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏙️</span> Victoria — Marché Sir Selwyn Clarke <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="act-note">5 min en voiture. Le marché couvert est l'un des plus colorés de l'océan Indien : épices locales (cannelle, vanille, cardamome), fruits exotiques, artisanat. Tour de l'horloge de Victoria. Très animé l'après-midi.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">17h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Beau Vallon — Coucher de soleil <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="act-note">15 min de route depuis Naturalis. Plus belle plage de Mahé, 2 km de sable blanc. Eau calme, baignade excellente. Le coucher de soleil depuis Beau Vallon est splendide — orientation plein ouest sur l'horizon ouvert.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">19h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Dîner — Beau Vallon (rester sur place)</div>
+              <div class="act-note">Plusieurs restaurants de qualité en bord de plage à Beau Vallon. Mahek Restaurant (indien, végétarien) ou Baobab Pizzeria.</div>
+            </div>
+            <div class="act-price">20–30 CHF</div>
+          </div>
+        </div>
+
+        <div class="mini-map-section">
+          <div class="mini-map-title">📍 Distances depuis Naturalis (La Louise)</div>
+          <div class="route-map">
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:var(--mahe)"></div>
+              <div class="route-stop-name" style="color:var(--mahe)">Naturalis<br>(base)</div>
+            </div>
+            <div class="route-line" style="position:relative;"><span class="route-time">5 min</span></div>
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:var(--gold)"></div>
+              <div class="route-stop-name">Victoria<br>Marché</div>
+            </div>
+            <div class="route-line" style="position:relative;"><span class="route-time">10 min</span></div>
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:#2A6A8A"></div>
+              <div class="route-stop-name">Beau<br>Vallon</div>
+            </div>
+            <div class="route-line" style="position:relative;"><span class="route-time">10 min</span></div>
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:var(--praslin)"></div>
+              <div class="route-stop-name">Jardin<br>Botanique</div>
+            </div>
+            <div class="route-line" style="position:relative;"><span class="route-time">10 min</span></div>
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:#6A4A2A"></div>
+              <div class="route-stop-name">Mission<br>Lodge</div>
+            </div>
+            <div class="route-line" style="position:relative;"><span class="route-time">15 min</span></div>
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:#8A2A4A"></div>
+              <div class="route-stop-name">Anse<br>Intendance</div>
+            </div>
+            <div class="route-line" style="position:relative;"><span class="route-time">10 min</span></div>
+            <div class="route-stop">
+              <div class="route-stop-dot" style="background:#3A3A8A"></div>
+              <div class="route-stop-name">Aéroport<br>SEZ</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Dîner Mahé — Végétarien</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Mahek Restaurant (Beau Vallon) <span class="veg-badge">VEG ✓✓</span></div>
+                <div class="resto-desc">Cuisine indienne haut de gamme. Shahi paneer, kadai paneer, dhal, naan. Spécial veg dinner. Vue mer. Fermé sam-dim.</div>
+              </div>
+              <div class="resto-price">25–35 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Baobab Pizzeria (Beau Vallon) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Pizzas végétariennes délicieuses, vue plage, ambiance détendue. Très apprécié des végétariens.</div>
+              </div>
+              <div class="resto-price">15–20€<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J23 : GRANDE JOURNÉE MAHÉ ── -->
+    <div class="day-block" id="j23">
+      <div class="day-marker dm-mahe">23</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--mahe)">Vendredi 23 Octobre 2026</div>
+            <div class="day-title">Grand Tour de Mahé</div>
+            <div class="day-tagline">Jardin Botanique · Mission Lodge · Côte Sud · Anse Intendance</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-mahe">🏙️ Mahé</span>
+            <span class="meta-chip mc-weather">☀️ 29°C</span>
+          </div>
+        </div>
+
+        <div class="info-box ib-warn" style="margin:12px 20px 0;">
+          <div class="info-box-icon">⚠️</div>
+          <div class="info-box-text">
+            <div class="info-box-title">Vol demain à 8h00 — Check-list soirée J23</div>
+            <strong>🚗 Restituer la voiture</strong> avant le dîner (19h) ou confirmer retour aéroport le matin. 
+            Rentrer à Naturalis avant 22h. Préparer <strong>tous les bagages ce soir</strong>. 
+            Taxi ou navette aéroport à réserver MAINTENANT : départ Naturalis <strong>5h30 max</strong> — aéroport à 10 min. Checkout matinal à signaler à Roland.
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">08h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌿</span> Jardin Botanique National <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-jardin"><div class="exc-img-icon">🐢</div><div class="exc-img-label">Tortues géantes</div><div class="exc-img-sub">En liberté dans le parc</div></div>
+                <div class="exc-img img-jardin" style="background:linear-gradient(135deg,#1A4A2A,#3A6A3A)"><div class="exc-img-icon">🌺</div><div class="exc-img-label">Palmiers endémiques</div><div class="exc-img-sub">Orchidées · Nénuphars géants</div></div>
+              </div>
+              <div class="act-note">10 min de Naturalis. Fondé en 1901, l'un des plus beaux jardins de l'océan Indien. Tortues géantes en liberté (comme La Digue), palmiers endémiques, orchidées, nénuphars géants. ~1h30 de visite.</div>
+            </div>
+            <div class="act-price">~10 CHF ×4</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">10h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌄</span> Mission Lodge Lookout — Vue panoramique <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-mission"><div class="exc-img-icon">🌄</div><div class="exc-img-label">Vue côte ouest</div><div class="exc-img-sub">Plus beau panorama de Mahé</div></div>
+                <div class="exc-img img-mission" style="background:linear-gradient(135deg,#2A3A1A,#3A5A2A)"><div class="exc-img-icon">🏛️</div><div class="exc-img-label">Ruines Mission 19e s.</div><div class="exc-img-sub">Forêt tropicale · Sentier facile</div></div>
+              </div>
+              <div class="act-note">20 min de route en montagne. Ancienne mission du 19e siècle partiellement en ruine au cœur de la forêt tropicale. Vue époustouflante sur Mahé, la côte ouest et les îles. Randonnée facile ~30 min sur place.</div>
+              <div class="act-tip">🌄 Un des plus beaux points de vue de tout l'archipel des Seychelles</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">12h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏖️</span> Côte sud — Anse Takamaka & Anse Intendance <span class="popularity"><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span><span class="pop-dot pop-fill"></span></span></div>
+              <div class="excursion-imgs">
+                <div class="exc-img img-intendance"><div class="exc-img-icon">🌊</div><div class="exc-img-label">Anse Intendance</div><div class="exc-img-sub">Plage sauvage · Photos seulement</div></div>
+                <div class="exc-img img-intendance" style="background:linear-gradient(135deg,#0A3A5A,#1A5A7A)"><div class="exc-img-icon">🏊</div><div class="exc-img-label">Anse Takamaka</div><div class="exc-img-sub">Calme · Baignade possible</div></div>
+              </div>
+              <div class="act-note">Route panoramique côte sud (~45 min depuis Mission Lodge). Anse Intendance : plage sauvage la plus spectaculaire de Mahé, vagues, sable doré, jungle tropicale en arrière-plan. Anse Takamaka : plus calme, baignade possible. Déjeuner pique-nique ou resto sur place.</div>
+              <div class="act-tip">⚠️ Anse Intendance a des courants — baignade à surveiller · Anse Takamaka plus sûre</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">15h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🛍️</span> Shopping — Souvenirs & marché Victoria</div>
+              <div class="act-note">Retour vers Victoria. Marché Sir Selwyn Clarke pour achats dernière minute : épices (cannelle, vanille, girofle), huile de coco, artisanat en feuilles de cocotier. SMB Mall ou Eden Island pour souvenirs premium.</div>
+            </div>
+            <div class="act-price">50–100 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">17h30</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🏊</span> Dernier bain — Beau Vallon + coucher de soleil final</div>
+              <div class="act-note">Ultime coucher de soleil des Seychelles depuis Beau Vallon. Moment mémorable pour clôturer le voyage.</div>
+            </div>
+            <div class="act-price free">Gratuit</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">19h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🚗</span> Retour voiture de location — Avant le dîner</div>
+              <div class="act-note">Retourner la voiture <strong>avant le dîner</strong> (19h max) à Seychelles Rentacar ou au point de collecte Victoria. Confirmer le lieu exact de restitution avec l'agence à la réservation — certains acceptent l'aéroport le matin du J24 (avant 6h), d'autres exigent la veille. <strong>Si restitution aéroport J24 :</strong> partir de Naturalis à 5h00 avec les bagages, déposer la voiture au parking aéroport, continuer à pied jusqu'au terminal (5 min).</div>
+              <div class="act-tip">⚠️ Vérifier avec Seychelles Rentacar : restitution aéroport J24 matin = option pratique si disponible · Confirmer 48h avant</div>
+            </div>
+            <div class="act-price free">Incl.</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">20h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🍽️</span> Dîner d'adieu — Restaurant gastronomique</div>
+              <div class="act-note">Dernière soirée — craquez pour un beau dîner végétarien. La Scala (pâtes/cuisine italienne végé), Trader Vic's (Eden Island, vue spectaculaire, options végé). <strong>Si voiture rendue :</strong> prendre un taxi pour le dîner (~15 CHF aller-retour depuis Naturalis).</div>
+              <div class="act-tip">💡 Réservez La Scala ou Trader Vic's à l'avance pour ce soir</div>
+            </div>
+            <div class="act-price">25–40 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">22h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🧳</span> Retour Naturalis — Préparation bagages & check-out anticipé</div>
+              <div class="act-note">Préparer tous les bagages ce soir. Charger téléphones et powerbanks. Confirmer le taxi pour 5h30 (prépayer si possible). Signaler à Roland votre départ très matinal — il peut préparer un checkout silencieux pour ne pas déranger les voisins.</div>
+            </div>
+            <div class="act-price free">—</div>
+          </div>
+        </div>
+
+        <div class="variants-section">
+          <div class="variants-title">🔀 Alternatives pour J23</div>
+          <div class="variants-grid">
+            <div class="variant-card">
+              <div class="variant-label va">▶ Option A — Programme du jour ✅</div>
+              <div class="variant-img">
+                <div class="vimg img-mission"><div class="vimg-icon">🌄</div><div class="vimg-label">Mission Lodge</div></div>
+                <div class="vimg img-intendance"><div class="vimg-icon">🌊</div><div class="vimg-label">Anse Intendance</div></div>
+              </div>
+              <div class="variant-text">Jardin Botanique + Mission Lodge + Côte Sud + Victoria. Le programme complet idéal pour 1 journée à Mahé.</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vb">▶ Option B — Copolia Trail</div>
+              <div class="variant-img">
+                <div class="vimg img-mission"><div class="vimg-icon">🌳</div><div class="vimg-label">Forêt Morne</div></div>
+                <div class="vimg img-mission" style="background:linear-gradient(135deg,#1A3A1A,#3A5A2A)"><div class="vimg-icon">🦎</div><div class="vimg-label">Gecko diurne</div></div>
+              </div>
+              <div class="variant-text">Randonnée Copolia (2h aller-retour) dans la forêt du Morne Seychellois — palmiers endémiques, gecko diurne, vue sur Victoria. Niveau modéré.</div>
+            </div>
+            <div class="variant-card">
+              <div class="variant-label vc">▶ Option C — Journée Beau Vallon</div>
+              <div class="variant-img">
+                <div class="vimg img-bvallon"><div class="vimg-icon">🏖️</div><div class="vimg-label">Beau Vallon</div></div>
+                <div class="vimg img-victoria"><div class="vimg-icon">🛍️</div><div class="vimg-label">Victoria Market</div></div>
+              </div>
+              <div class="variant-text">Si fatigue accumulée : journée relax à Beau Vallon + snorkeling + shopping Victoria l'après-midi. Moins exigeant physiquement.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="resto-section">
+          <div class="resto-header"><span class="resto-icon">🌿</span><span class="resto-title-txt">Restaurants Mahé — Végétarien</span></div>
+          <div class="resto-grid">
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">La Scala (Victoria) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Cuisine italienne, pâtes et pizzas végétariennes, belle terrasse. L'une des meilleures tables de Mahé.</div>
+              </div>
+              <div class="resto-price">25–35 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Trader Vic's (Eden Island) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Vue spectaculaire sur les yachts et la marina. Menu varié, options végétariennes. Ambiance festive. Réserver.</div>
+              </div>
+              <div class="resto-price">30–45 CHF<span class="pp">/pers</span></div>
+            </div>
+            <div class="resto-item">
+              <div>
+                <div class="resto-name">Seyshima (près Naturalis) <span class="veg-badge">VEG ✓</span></div>
+                <div class="resto-desc">Cuisine asiatique créative, végétarien possible, proche de Naturalis. Idéal si fatigue du soir.</div>
+              </div>
+              <div class="resto-price">18–25 CHF<span class="pp">/pers</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── J24 : DÉPART ── -->
+    <div class="day-block" id="j24">
+      <div class="day-marker dm-transit">24</div>
+      <div class="day-card">
+        <div class="day-card-header">
+          <div>
+            <div class="day-date" style="color:var(--transit)">Samedi 24 Octobre 2026 — Départ</div>
+            <div class="day-title">✈️ Vol Retour — 8h00</div>
+            <div class="day-tagline">Lever 5h00 · Taxi 5h30 · Aéroport 5h50 · Décollage 8h00</div>
+          </div>
+          <div class="day-meta">
+            <span class="meta-chip mc-transit">✈️ Départ</span>
+          </div>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-row">
+            <div class="act-time">05h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">⏰</span> Réveil & départ Naturalis</div>
+              <div class="act-note">Taxi pré-réservé. Bagages préparés la veille. Checkout arrangé avec Roland.</div>
+            </div>
+            <div class="act-price">~15 CHF</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">05h50</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">✈️</span> Aéroport International des Seychelles (SEZ)</div>
+              <div class="act-note">Enregistrement recommandé 2h avant pour vol international. Douane, sécurité. Les derniers souvenirs duty-free sont en zone d'embarquement.</div>
+            </div>
+            <div class="act-price free">—</div>
+          </div>
+          <div class="activity-row">
+            <div class="act-time">08h00</div>
+            <div class="act-content">
+              <div class="act-name"><span class="act-icon">🌊</span> Décollage — Au revoir Seychelles</div>
+              <div class="act-note">En regardant par le hublot au décollage : la vue sur l'archipel depuis les airs est à couper le souffle. Un dernier souvenir des îles de rêve.</div>
+            </div>
+            <div class="act-price free">✈️</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline mahe -->
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     BUDGET TOTAL
+══════════════════════════════════════════════════════════ -->
+<div class="container">
+  <section class="budget-section" id="budget">
+    <div class="budget-wrap">
+      <div class="budget-header">
+        <div>
+          <h2>Budget Total Estimé</h2>
+          <p>4 adultes · 9 jours · 3 îles · Tout compris</p>
+        </div>
+        <div class="total-badge">
+          <div class="total-amount">4 700–6 200 CHF</div>
+          <div class="total-label">Estimation complète</div>
+        </div>
+      </div>
+
+      <div class="budget-islands">
+        <div class="budget-island">
+          <div class="bi-label" style="color:var(--praslin)">🌴 Praslin</div>
+          <div class="bi-val" style="color:var(--praslin)">~2 200 CHF</div>
+          <div class="bi-days">4 nuits · 5 jours</div>
+        </div>
+        <div class="budget-island">
+          <div class="bi-label" style="color:var(--digue)">🚲 La Digue</div>
+          <div class="bi-val" style="color:var(--digue)">~800 CHF</div>
+          <div class="bi-days">2 nuits · 2-3 jours</div>
+        </div>
+        <div class="budget-island">
+          <div class="bi-label" style="color:var(--mahe)">🏙️ Mahé</div>
+          <div class="bi-val" style="color:var(--mahe)">~900 CHF</div>
+          <div class="bi-days">2 nuits · 2-3 jours</div>
+        </div>
+      </div>
+
+      <div class="budget-cat-head">
+        <span>Poste</span>
+        <span>Île</span>
+        <span>Min CHF</span>
+        <span>Max CHF</span>
+      </div>
+      <div id="budget-rows-main"></div>
+
+      <div class="budget-total-row">
+        <div class="btr-label">TOTAL ESTIMÉ — 4 adultes · 9 jours</div>
+        <div></div>
+        <div class="btr-min">4 700 CHF</div>
+        <div class="btr-max">6 200 CHF</div>
+      </div>
+
+      <div class="budget-verdict">
+        <strong>✅ Budget commentaire :</strong> Le poste dominant est le logement (~35%). Les activités (plongée, excursions) représentent ~25%. Les repas au restaurant ~20% — réduit significativement grâce à la cuisine à Palm Holiday (Praslin) et au petit-déjeuner inclus partout. <strong>Économies possibles :</strong> cuisiner le soir à Praslin (~300 CHF d'économie), privilégier les food trucks et stands de rue à La Digue (~150 CHF), et faire un pique-nique à Mission Lodge plutôt qu'un restaurant le 23 (~80 CHF). <strong>Budget mini atteignable : ~4 200 CHF.</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PRACTICAL ════════════════════ -->
+  <section class="practical-section" id="practical">
+    <div class="practical-header">
+      <h2>Informations Pratiques</h2>
+    </div>
+    <div class="practical-grid">
+      <div class="practical-item">
+        <div class="pi-icon">🚗</div>
+        <div class="pi-title">Voiture de location</div>
+        <div class="pi-text">Praslin + Mahé uniquement. <strong>Seychelles Rentacar</strong> recommandé : livraison au port/aéroport, assurance tous risques incluse, sans caution. 2nd conducteur gratuit. Réserver 2 mois à l'avance.<br><a href="https://www.seychellesrentacar.com">seychellesrentacar.com</a></div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">🚢</div>
+        <div class="pi-title">Ferries inter-îles</div>
+        <div class="pi-text"><strong>Mahé-Praslin :</strong> Cat Cocos · 1h · ~30€/pers aller<br><strong>Praslin-Digue :</strong> Inter Island · 15 min · 15€<br><strong>Digue-Mahé :</strong> Cat Cocos · 1h45<br><a href="https://cat-cocos.com">cat-cocos.com</a> — réserver à l'avance impérativement</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">💱</div>
+        <div class="pi-title">Monnaie & Paiement</div>
+        <div class="pi-text">Roupie Seychelloise (SCR). 1 CHF ≈ 14 SCR. Euro et USD acceptés partout. Cartes Visa/MC acceptées dans la plupart des établissements. Emporter du cash pour les marchés, stands, petits restaurants.</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">📱</div>
+        <div class="pi-title">SIM Card & Internet</div>
+        <div class="pi-text">Acheter une SIM <strong>Airtel Seychelles</strong> dès l'aéroport de Mahé (~900 SCR = ~65 CHF pour data illimitée). Fonctionne sur les 3 îles. Indispensable pour Google Maps, ferries, communications.</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">🌡️</div>
+        <div class="pi-title">Météo Octobre</div>
+        <div class="pi-text">Période de transition (fin saison sèche → saison humide). Temps généralement beau, 28-31°C. Quelques averses tropicales courtes possibles, surtout l'après-midi. Mer calme en général. Octobre = excellent timing.</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">🤿</div>
+        <div class="pi-title">Plongée — Octopus Divers</div>
+        <div class="pi-text">PADI 5★, Anse Volbert, Praslin. Top 100 mondial. Parle français. <strong>Baptême : ~60€/pers · 2 plongées certifié : ~75€/pers.</strong> Réserver à l'avance sur <a href="https://www.padi.com">padi.com</a> ou directement.</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">🌿</div>
+        <div class="pi-title">Végétariens aux Seychelles</div>
+        <div class="pi-text">Bonne nouvelle : les restaurants indiens (Le Relax Hotels = gestion indienne), curry créole aux légumes et dhal sont présents partout. Demander "vegetarian" — bien compris. <strong>Racine de taro, breadfruit, papaye verte</strong> = légumes locaux délicieux.</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">🦟</div>
+        <div class="pi-title">Moustiques & Santé</div>
+        <div class="pi-text">Octobre = début saison humide = moustiques en soirée. Emporter <strong>répulsif DEET fort</strong>. Pas de paludisme aux Seychelles. Crème solaire indice 50 min. Chaussures légères pour randonnées. Eau robinet non potable — eau en bouteille.</div>
+      </div>
+      <div class="practical-item">
+        <div class="pi-icon">🆘</div>
+        <div class="pi-title">Urgences & Santé</div>
+        <div class="pi-text"><strong>SAMU Seychelles : 999</strong><br>Hôpital Victoria (Mahé) : +248 4 388 000<br>Pharmacies à Victoria (Mahé) et Baie Ste-Anne (Praslin). Assurance voyage obligatoire — vérifier couverture plongée si applicable.</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PACKING LIST
+══════════════════════════════════════════════════════════ -->
+<div class="container">
+  <section class="practical-section" id="packing" style="margin-bottom:30px;">
+    <div class="practical-header">
+      <h2>🎒 Packing List — Ce qu'il faut absolument emporter</h2>
+    </div>
+    <div style="padding:0;">
+
+      <!-- Categories -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:0;">
+
+        <div class="practical-item">
+          <div class="pi-icon">🌊</div>
+          <div class="pi-title">Mer & Plage</div>
+          <div class="pi-text">
+            ✅ Masque + tuba (ou louer sur place ~5€/j)<br>
+            ✅ Palmes légères (optionnel)<br>
+            ✅ Lycra anti-UV ou combinaison légère<br>
+            ✅ Crème solaire <strong>minérale indice 50+</strong> (chimique = interdit sur les récifs)<br>
+            ✅ Sandales aquatiques (coraux tranchants)<br>
+            ✅ Lunettes de soleil polarisées<br>
+            ✅ Beach bag imperméable
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">🤿</div>
+          <div class="pi-title">Plongée (certifiés)</div>
+          <div class="pi-text">
+            ✅ <strong>Carnet de plongée (logbook)</strong> obligatoire<br>
+            ✅ <strong>Certificat PADI/CMAS</strong> original ou digital<br>
+            ✅ Ordinateur de plongée si vous en avez un<br>
+            ✅ Combinaison 3mm (eau à 28-29°C)<br>
+            ✅ Lampe de plongée (si night dive)<br>
+            ⚠️ Octopus Divers fournit tout le reste
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">🥾</div>
+          <div class="pi-title">Randonnées (niveau modéré)</div>
+          <div class="pi-text">
+            ✅ Chaussures de marche légères fermées (Nid d'Aigle, Mission Lodge)<br>
+            ✅ Bâtons télescopiques si genou sensible<br>
+            ✅ Gourde 1L minimum (pas d'eau potable sur les sentiers)<br>
+            ✅ Mini sac à dos avec poche hydratation<br>
+            ✅ Chapeau à bord large<br>
+            ✅ Vêtements légers à séchage rapide
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">🦟</div>
+          <div class="pi-title">Santé & Protection</div>
+          <div class="pi-text">
+            ✅ <strong>Répulsif DEET 30-50%</strong> (moustiques soirée en octobre)<br>
+            ✅ Antihistaminique (piqûres, allergies)<br>
+            ✅ Smecta ou Imodium (changement eau/alimentation)<br>
+            ✅ Paracétamol + Ibuprofène<br>
+            ✅ Pansements imperméables<br>
+            ✅ Lotion après-soleil / aloé vera<br>
+            ✅ Désinfectant main + lingettes<br>
+            ✅ Assurance voyage avec couverture plongée
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">📷</div>
+          <div class="pi-title">Photo & Tech</div>
+          <div class="pi-text">
+            ✅ Appareil photo étanche ou GoPro (obligatoire !)<br>
+            ✅ Drone (autorisé si déclaré aux autorités)<br>
+            ✅ Powerbank 20 000 mAh × 2<br>
+            ✅ Adaptateur prise UK (Seychelles = prises anglaises !)<br>
+            ✅ Pochette étanche téléphone pour plage<br>
+            ✅ Micro SD cards supplémentaires<br>
+            ✅ Oreillettes bluetooth (vélo La Digue)
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">👗</div>
+          <div class="pi-title">Vêtements (9 jours)</div>
+          <div class="pi-text">
+            ✅ 3-4 maillots de bain (sèche vite mais on en use !)<br>
+            ✅ 4-5 t-shirts légers lin ou coton<br>
+            ✅ 1 tenue soirée restaurant (pas de robe obligatoire)<br>
+            ✅ Short/jupe légère × 3<br>
+            ✅ Châle léger (AC dans les ferries = froid !)<br>
+            ✅ Veste légère imperméable (averses tropicales)<br>
+            ✅ Tong légères<br>
+            ⚠️ Pas de gros pulls — inutile, même le soir
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">🥗</div>
+          <div class="pi-title">Végétarien — Pratique</div>
+          <div class="pi-text">
+            ✅ Emporter quelques <strong>barres protéinées véganes</strong> (dépannage randonnée)<br>
+            ✅ Connaître les mots : "sans poisson", "végétarien" → en créole : <em>"San pwason, mwan manze pwason"</em><br>
+            ✅ Les restaurants indiens sont vos meilleurs alliés partout<br>
+            ✅ Marché de Victoria = légumes frais et fruits à prix local<br>
+            ✅ Jackfruit, breadfruit, cari citrouille = délicieux et local
+          </div>
+        </div>
+
+        <div class="practical-item">
+          <div class="pi-icon">📄</div>
+          <div class="pi-title">Documents Essentiels</div>
+          <div class="pi-text">
+            ✅ Passeport valide 6 mois après le retour<br>
+            ✅ Billets d'avion (aller + retour imprimés)<br>
+            ✅ Réservations ferries imprimées<br>
+            ✅ Réservations hôtels × 3<br>
+            ✅ Contrat voiture de location × 2<br>
+            ✅ Certificats de plongée originaux<br>
+            ✅ Attestation assurance voyage<br>
+            ✅ Copie numérique de tout sur le téléphone
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════
+     PHRASES CRÉOLES SEYCHELLOISES
+══════════════════════════════════════════════════════════ -->
+<div class="container" style="margin-bottom:60px;">
+  <section class="practical-section">
+    <div class="practical-header">
+      <h2>🗣️ Phrases Créoles Seychelloises — Kreol Seselwa</h2>
+    </div>
+
+    <div style="padding:16px 24px;background:rgba(200,146,42,0.05);border-bottom:1px solid var(--border);font-size:12px;color:var(--muted);line-height:1.7;">
+      Le <strong>Kreol Seselwa</strong> est la langue maternelle des Seychellois. Parler quelques mots créoles leur fait chaud au cœur — vous serez immédiatement adoptés ! Le français et l'anglais sont aussi officiels et très compris.
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:0;">
+
+      <div class="practical-item">
+        <div class="pi-icon">👋</div>
+        <div class="pi-title">Salutations de base</div>
+        <div class="pi-text">
+          <table style="width:100%;font-size:11px;border-collapse:collapse;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Bonjour</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Bonjour / Bonzour</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Bonsoir</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Bonswar</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Comment allez-vous ?</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Koman ou sava ?</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Ça va bien, merci</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Mon sava byen, mersi</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Au revoir</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Orwar / Babay</td>
+            </tr>
+            <tr>
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">À bientôt !</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">A plostar !</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="practical-item">
+        <div class="pi-icon">🙏</div>
+        <div class="pi-title">Politesse & Remerciements</div>
+        <div class="pi-text">
+          <table style="width:100%;font-size:11px;border-collapse:collapse;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Merci (beaucoup)</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Mersi (boukou)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">S'il vous plaît</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Silvouple</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Excusez-moi</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Pardon / Eskize mwan</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Oui / Non</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Wi / Non</td>
+            </tr>
+            <tr>
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">C'est magnifique !</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">I bel anpil !</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="practical-item">
+        <div class="pi-icon">🥗</div>
+        <div class="pi-title">Au Restaurant — Végétarien strict</div>
+        <div class="pi-text">
+          <table style="width:100%;font-size:11px;border-collapse:collapse;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Je suis végétarien(ne)</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Mon enn vegetaryen</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Sans poisson, s'il vous plaît</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;"><strong style="color:var(--red-warn);">San pwason, silvouple</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Pas de viande, pas de poisson</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;"><strong style="color:var(--red-warn);">Pa vyann, pa pwason</strong></td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Avez-vous des plats végétariens ?</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Ou ena manze pour vegetaryen ?</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">C'est délicieux !</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">I bon anpil !</td>
+            </tr>
+            <tr>
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">L'addition, s.v.p.</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Zot kont, silvouple</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="practical-item">
+        <div class="pi-icon">🗺️</div>
+        <div class="pi-title">Orientation & Transports</div>
+        <div class="pi-text">
+          <table style="width:100%;font-size:11px;border-collapse:collapse;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Où est...?</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Kot i ete... ?</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">À gauche / à droite</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">A gos / a drwat</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">C'est loin ?</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">I lwen ?</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">À pied / en vélo</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">A pye / ek bisiklet</td>
+            </tr>
+            <tr>
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Le ferry / le bateau</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Bato / feri</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="practical-item">
+        <div class="pi-icon">🏖️</div>
+        <div class="pi-title">À la Plage & Nature</div>
+        <div class="pi-text">
+          <table style="width:100%;font-size:11px;border-collapse:collapse;">
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">La plage est belle !</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Laplaz i bel !</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">La mer est calme</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Lamer i kalm</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">La tortue !</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Tòrti !</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Noix de coco fraîche</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Koko fre</td>
+            </tr>
+            <tr>
+              <td style="padding:5px 0;color:var(--text);font-weight:500;">Quel temps magnifique !</td>
+              <td style="padding:5px 0;color:var(--praslin);font-style:italic;font-weight:600;">Letan i bel anpil !</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="practical-item">
+        <div class="pi-icon">💬</div>
+        <div class="pi-title">Phrases Magiques (à mémoriser !)</div>
+        <div class="pi-text" style="line-height:2;">
+          <span style="background:rgba(26,122,94,0.08);padding:3px 8px;border-radius:3px;font-style:italic;font-weight:600;color:var(--praslin);">"Koman ou sava ?"</span> → Dites ça à votre hôte le matin — ils adorent !<br><br>
+          <span style="background:rgba(26,122,94,0.08);padding:3px 8px;border-radius:3px;font-style:italic;font-weight:600;color:var(--praslin);">"I bel anpil !"</span> → Après chaque plage, chaque coucher de soleil...<br><br>
+          <span style="background:rgba(200,146,42,0.1);padding:3px 8px;border-radius:3px;font-style:italic;font-weight:600;color:var(--gold);">"Pa vyann, pa pwason"</span> → À répéter dans chaque restaurant !<br><br>
+          <span style="background:rgba(26,122,94,0.08);padding:3px 8px;border-radius:3px;font-style:italic;font-weight:600;color:var(--praslin);">"Mersi boukou !"</span> → Pour tout — les Seychellois apprécient énormément
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<footer>Seychelles · Programme personnalisé · 16–24 Octobre 2026 · 4 adultes · Végétarien · Sources : SeyVillas · TripAdvisor · Booking · PADI · Cat Cocos</footer>
+
+<script>
+// ── Progress bar ──────────────────────────────────────────
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = (scrollTop / docHeight) * 100;
+  document.getElementById('progressFill').style.width = progress + '%';
+});
+
+// ── Budget rows data ──────────────────────────────────────
+const budgetItems = [
+  // Logement
+  { icon:'🏠', item:'Palm Holiday Apartments (Praslin)', note:'4 nuits × ~185€ × 2 apparts', island:'P', min:1200, max:1480 },
+  { icon:'🏨', item:'Le Relax Beach House (La Digue)', note:'2 nuits × ~180€/ch × 2 chambres', island:'D', min:660, max:800 },
+  { icon:'🏡', item:'Naturalis Oceanview (Mahé)', note:'2 nuits × ~200€ × 2 studios', island:'M', min:700, max:860 },
+  // Transport
+  { icon:'🚢', item:'Ferries inter-îles × 4 (Mahé-Pras-Digue-Mahé)', note:'Cat Cocos + Inter Island', island:'ALL', min:380, max:420 },
+  { icon:'🚗', item:'Location voiture Praslin (5 jours)', note:'~70€/jour, assurance incluse', island:'P', min:280, max:350 },
+  { icon:'🚗', item:'Location voiture Mahé (2 jours)', note:'~70€/jour', island:'M', min:120, max:160 },
+  { icon:'⛽', item:'Essence voitures (Praslin + Mahé)', note:'Estimatif selon kilométrage', island:'ALL', min:60, max:100 },
+  { icon:'🚲', item:'Location vélos électriques La Digue × 4', note:'~12€/jour/vélo × 2 jours', island:'D', min:90, max:120 },
+  { icon:'🚕', item:'Taxis (aéroport, imprévus)', note:'Mahé arrivée/départ + divers', island:'ALL', min:60, max:100 },
+  // Activités
+  { icon:'🌴', item:'Vallée de Mai UNESCO × 4', note:'~25€/pers', island:'P', min:95, max:100 },
+  { icon:'⛵', item:'Excursion Île St-Pierre snorkeling × 4', note:'~45€/pers', island:'P', min:170, max:190 },
+  { icon:'⛵', item:'Excursion Îles du Nord (Cocos/Sisters) × 4', note:'~55€/pers', island:'P', min:200, max:240 },
+  { icon:'🤿', item:'Plongée bouteille × 4 (Octopus Divers)', note:'Baptême ~60€ ou certifié ~75€', island:'P', min:230, max:310 },
+  { icon:'📸', item:'Entrée Anse Source d\'Argent × 4', note:'~10€/pers via L\'Union Estate', island:'D', min:45, max:45 },
+  { icon:'🌿', item:'Jardin Botanique Mahé × 4', note:'~10€/pers', island:'M', min:38, max:42 },
+  // Repas
+  { icon:'🍽️', item:'Repas restaurants × 9 jours (dîners)', note:'Moyenne 20€/pers/soir × 4 × 9', island:'ALL', min:400, max:600 },
+  { icon:'🥗', item:'Déjeuners / pique-niques / snacks', note:'Stands locaux + supérette', island:'ALL', min:150, max:220 },
+  { icon:'🛒', item:'Courses supermarché (Praslin)', note:'Cuisine à l\'appartement 4 nuits', island:'P', min:100, max:150 },
+  // Divers
+  { icon:'📱', item:'SIM Card Airtel × 4', note:'~65 CHF/pers — data illimitée', island:'ALL', min:200, max:260 },
+  { icon:'🌊', item:'Taxe environnementale tourisme', note:'~25-100 SCR/pers/nuit × 4 × 8', island:'ALL', min:40, max:80 },
+  { icon:'🛍️', item:'Souvenirs, épices, artisanat', note:'Victoria + marchés', island:'ALL', min:100, max:200 },
+  { icon:'💊', item:'Pharmacie, divers, imprévus', note:'Répulsif, crème solaire, etc.', island:'ALL', min:60, max:120 },
+];
+
+const islandColors = {
+  P: 'bri-p', D: 'bri-d', M: 'bri-m', ALL: 'bri-all'
+};
+
+const islandLabels = {
+  P: 'Praslin', D: 'Digue', M: 'Mahé', ALL: 'Toutes'
+};
+
+const container = document.getElementById('budget-rows-main');
+budgetItems.forEach(b => {
+  const row = document.createElement('div');
+  row.className = 'budget-row';
+  row.innerHTML = `
+    <div class="br-item">
+      <span class="br-icon">${b.icon}</span>
+      <div>
+        <div>${b.item}</div>
+        <span class="br-note">${b.note}</span>
+      </div>
+    </div>
+    <div><span class="br-island ${islandColors[b.island]}">${islandLabels[b.island]}</span></div>
+    <div class="br-min">${b.min}</div>
+    <div class="br-max">${b.max}</div>
+  `;
+  container.appendChild(row);
+});
+</script>
+</body>
+</html>
